@@ -1,36 +1,58 @@
 pragma solidity 0.5.10;
 
-import "../../contracts/contracts/IDelegator.sol";
+import "../../contracts/contracts/Delegator.sol";
 
 
 contract King {
-    IDelegator public delegator;
-    uint256[] jobs;
-    uint256 king = 0;
-    uint256[] lastResults;
+    Delegator public delegator;
+    uint256[] public jobs;
+    uint256 public numJobs = 0;
+    uint256 public king = 0;
+    uint256[] public lastResults;
 
     constructor() public {
-        delegator = IDelegator(0x4Bcd81d77Bb9d7493F99742b49B072c09D548CB4);
+        delegator = Delegator(0x058EF5a3d450A2fac5d24dDc75d516A136AE3f62);
+    }
+
+    function test() public view returns(uint256) {
+        // (, , , , uint256 price) = delegator.getJob(0);
+        uint256 price = delegator.getResult(1);
+        return price;
     }
 
     function addFeed(uint256 jobId) public {
-        jobs[jobs.length]=(jobId);
+        jobs.push(jobId);
+        numJobs = numJobs + 1;
+        lastResults.push(0);
     }
 
     function findKing() public {
-        uint256 biggestDiff = 0;
-        uint256 newKing = 0;
+        uint256 highestGain = 0;
+        uint256 highestGainer = 0;
+        uint256 leastLoss = 0;
+        uint256 leastLoser = 0;
+        // uint256 newKing = 0;
         for(uint256 i = 0; i < jobs.length; i++) {
-            (, , , , uint256 price) = delegator.getJob(i);
+            uint256 price = delegator.getResult(jobs[i]);
             if(price > lastResults[i]) {
-                if(price - lastResults[i] > biggestDiff) {
-                    biggestDiff = price - lastResults[i];
-                    newKing = i;
+                if(price - lastResults[i] > highestGain) {
+                    highestGain = price - lastResults[i];
+                    highestGainer = jobs[i];
                 }
-            }
-        king = newKing;
+            } else if(price < lastResults[i]) {
+                    if(lastResults[i] - price < leastLoss) {
+                        leastLoss = lastResults[i] - price;
+                        leastLoser = jobs[i];
+                    }
+                }
 
+            lastResults[i] = price;
+        // king = newKing;
+        }
+        if (highestGain > 0) {
+            king = highestGainer;
+        } else if (leastLoss > 0) {
+            king = leastLoser;
+        }
     }
-    }
-
 }
