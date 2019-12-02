@@ -7,7 +7,7 @@
 <p>3. If all cryptocurrencies lost value, find the crypto with least loss. This is the King of Crypto. </p>
 
     <h3> Add datafeed </h3>
-    <input v-model="datafeedId" type="number" min="0" max="20" step="1" />
+    <input v-model="datafeedId" type="number" min="1" max="20" step="1" />
     <button @click="addDatafeed"> Add datafeed</button>
     <p> Datafeeds: {{jobs}} </p>
 

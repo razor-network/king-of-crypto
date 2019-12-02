@@ -2,35 +2,140 @@ import Vue from 'vue'
 import Web3 from 'web3'
 
 import KingBuild from '../../../build/contracts/King.json'
-import DelegatorBuild from '../../../../contracts/build/contracts/Delegator.json'
-
 
 let web3
 let accounts
 
 let networkId = 5
 
-// let error
-// let ethereum
-
-// let _1e18 = new BigNumber('1000000000000000000')
 let King
 let Delegator
-// let warning = false
+
+let DelegatorAbi =  [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "jobManager",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "delegate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newDelegateAddress",
+          "type": "address"
+        }
+      ],
+      "name": "upgradeDelegate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getResult",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getJob",
+      "outputs": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "selector",
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "repeat",
+          "type": "bool"
+        },
+        {
+          "name": "result",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+  
 export const enableEth = async () => {
     if (typeof window.ethereum === 'undefined' ||
         typeof window.web3 === 'undefined') {
-        // alert('Browser does not support ethereum. Consider installing metamask!')
+        alert('Browser does not support ethereum. Consider installing metamask!')
         return false
     } else {
         // In the case the user has MetaMask installed, you can easily
         // ask them to sign in and reveal their accounts:
         accounts = await window.ethereum.enable()
         web3 = new Web3(window.web3.currentProvider)
-
-        // _1e18 = new web3.utils.BN('1000000000000000000')
         King = new web3.eth.Contract(KingBuild.abi, KingBuild.networks[networkId].address)
-        Delegator = new web3.eth.Contract(DelegatorBuild.abi, '0x058EF5a3d450A2fac5d24dDc75d516A136AE3f62')
+        Delegator = new web3.eth.Contract(DelegatorAbi, '0x058EF5a3d450A2fac5d24dDc75d516A136AE3f62')
 
         let id = await web3.eth.net.getId()
         if (id !== 5) return false

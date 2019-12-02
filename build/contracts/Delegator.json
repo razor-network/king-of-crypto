@@ -1,15 +1,15 @@
 {
-  "contractName": "King",
+  "contractName": "Delegator",
   "abi": [
     {
       "constant": true,
       "inputs": [
         {
-          "name": "",
+          "name": "id",
           "type": "uint256"
         }
       ],
-      "name": "jobs",
+      "name": "getResult",
       "outputs": [
         {
           "name": "",
@@ -24,98 +24,43 @@
       "constant": true,
       "inputs": [
         {
-          "name": "",
+          "name": "id",
           "type": "uint256"
         }
       ],
-      "name": "lastResults",
+      "name": "getJob",
       "outputs": [
         {
-          "name": "",
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "selector",
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "repeat",
+          "type": "bool"
+        },
+        {
+          "name": "result",
           "type": "uint256"
         }
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "numJobs",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "king",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "delegator",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "jobId",
-          "type": "uint256"
-        }
-      ],
-      "name": "addFeed",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "findKing",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"jobs\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"lastResults\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"numJobs\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"jobId\",\"type\":\"uint256\"}],\"name\":\"addFeed\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"king\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"delegator\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"findKing\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":\"King\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":{\"keccak256\":\"0x165a684e10b07f1afaa676434ab2aa0746d74cea21e2b8fdcfc9588850cd314a\",\"urls\":[\"bzzr://753f4773cbf720a872b459436a84e6ccfedd0b7b7f194b4bf90ae8e325ddfced\",\"dweb:/ipfs/QmNrm6SMfkvQm7XQbEExnxCopTmLCzmb8i4sva8nBXCSjc\"]}},\"version\":1}",
-  "bytecode": "0x60806040526000600255600060035534801561001a57600080fd5b5073058ef5a3d450a2fac5d24ddc75d516a136ae3f626000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506105108061007e6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063b7e785b61161005b578063b7e785b614610124578063cc181ca814610152578063ce9b793014610170578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c45780639212051c14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b6040518082815260200191505060405180910390f35b6101506004803603602081101561013a57600080fd5b810190808035906020019092919050505061020c565b005b61015a610274565b6040518082815260200191505060405180910390f35b61017861027a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101c261029f565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b60025481565b600181908060018154018082558091505090600182039060005260206000200160009091929091909150555060016002540160028190555060046000908060018154018082558091505090600182039060005260206000200160009091929091909150555050565b60035481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080905060008090506000809050600080905060008090505b6001805490508110156104ad5760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061031257fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035157600080fd5b505afa158015610365573d6000803e3d6000fd5b505050506040513d602081101561037b57600080fd5b810190808051906020019092919050505090506004828154811061039b57fe5b906000526020600020015481111561040a5785600483815481106103bb57fe5b90600052602060002001548203111561040557600482815481106103db57fe5b906000526020600020015481039550600182815481106103f757fe5b906000526020600020015494505b610483565b6004828154811061041757fe5b90600052602060002001548110156104825783816004848154811061043857fe5b906000526020600020015403101561048157806004838154811061045857fe5b90600052602060002001540393506001828154811061047357fe5b906000526020600020015492505b5b5b806004838154811061049157fe5b90600052602060002001819055505080806001019150506102b9565b5060008411156104c357826003819055506104d5565b60008211156104d457806003819055505b5b5050505056fea265627a7a723058205ceec917b0013444c50cb611e120969adb68a8e93a47db283558f75b432491d164736f6c634300050a0032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c8063b7e785b61161005b578063b7e785b614610124578063cc181ca814610152578063ce9b793014610170578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c45780639212051c14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b6040518082815260200191505060405180910390f35b6101506004803603602081101561013a57600080fd5b810190808035906020019092919050505061020c565b005b61015a610274565b6040518082815260200191505060405180910390f35b61017861027a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101c261029f565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b60025481565b600181908060018154018082558091505090600182039060005260206000200160009091929091909150555060016002540160028190555060046000908060018154018082558091505090600182039060005260206000200160009091929091909150555050565b60035481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080905060008090506000809050600080905060008090505b6001805490508110156104ad5760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061031257fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035157600080fd5b505afa158015610365573d6000803e3d6000fd5b505050506040513d602081101561037b57600080fd5b810190808051906020019092919050505090506004828154811061039b57fe5b906000526020600020015481111561040a5785600483815481106103bb57fe5b90600052602060002001548203111561040557600482815481106103db57fe5b906000526020600020015481039550600182815481106103f757fe5b906000526020600020015494505b610483565b6004828154811061041757fe5b90600052602060002001548110156104825783816004848154811061043857fe5b906000526020600020015403101561048157806004838154811061045857fe5b90600052602060002001540393506001828154811061047357fe5b906000526020600020015492505b5b5b806004838154811061049157fe5b90600052602060002001819055505080806001019150506102b9565b5060008411156104c357826003819055506104d5565b60008211156104d457806003819055505b5b5050505056fea265627a7a723058205ceec917b0013444c50cb611e120969adb68a8e93a47db283558f75b432491d164736f6c634300050a0032",
-  "sourceMap": "318:1422:0:-;;;422:1;397:26;;451:1;429:23;;493:103;8:9:-1;5:2;;;30:1;27;20:12;5:2;493:103:0;546:42;524:9;;:65;;;;;;;;;;;;;;;;;;318:1422;;;;;;",
-  "deployedSourceMap": "318:1422:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;318:1422:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;370:21;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;370:21:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;458:28;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;458:28:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;397:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;602:132;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;602:132:0;;;;;;;;;;;;;;;;;:::i;:::-;;429:23;;;:::i;:::-;;;;;;;;;;;;;;;;;;;338:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;740:998;;;:::i;:::-;;370:21;;;;;;;;;;;;;;;;;;;;;;;;;:::o;458:28::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;397:26::-;;;;:::o;602:132::-;651:4;661:5;651:16;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;651:16:0;;;;;;;;;;;;;;;;;;;;;;697:1;687:7;;:11;677:7;:21;;;;708:11;725:1;708:19;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;708:19:0;;;;;;;;;;;;;;;;;;;;;;602:132;:::o;429:23::-;;;;:::o;338:26::-;;;;;;;;;;;;;:::o;740:998::-;777:19;799:1;777:23;;810:21;834:1;810:25;;845:17;865:1;845:21;;876:18;897:1;876:22;;944:9;956:1;944:13;;940:650;963:4;:11;;;;959:1;:15;940:650;;;995:13;1011:9;;;;;;;;;;;:19;;;1031:4;1036:1;1031:7;;;;;;;;;;;;;;;;1011:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1011:28:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1011:28:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1011:28:0;;;;;;;;;;;;;;;;995:44;;1064:11;1076:1;1064:14;;;;;;;;;;;;;;;;1056:5;:22;1053:463;;;1126:11;1109;1121:1;1109:14;;;;;;;;;;;;;;;;1101:5;:22;:36;1098:163;;;1183:11;1195:1;1183:14;;;;;;;;;;;;;;;;1175:5;:22;1161:36;;1235:4;1240:1;1235:7;;;;;;;;;;;;;;;;1219:23;;1098:163;1053:463;;;1292:11;1304:1;1292:14;;;;;;;;;;;;;;;;1284:5;:22;1281:235;;;1358:9;1350:5;1333:11;1345:1;1333:14;;;;;;;;;;;;;;;;:22;:34;1330:168;;;1424:5;1407:11;1419:1;1407:14;;;;;;;;;;;;;;;;:22;1395:34;;1468:4;1473:1;1468:7;;;;;;;;;;;;;;;;1455:20;;1330:168;1281:235;1053:463;1547:5;1530:11;1542:1;1530:14;;;;;;;;;;;;;;;:22;;;;940:650;976:3;;;;;;;940:650;;;;1617:1;1603:11;:15;1599:133;;;1641:13;1634:4;:20;;;;1599:133;;;1687:1;1675:9;:13;1671:61;;;1711:10;1704:4;:17;;;;1671:61;1599:133;740:998;;;;:::o",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getResult\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getJob\",\"outputs\":[{\"name\":\"url\",\"type\":\"string\"},{\"name\":\"selector\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"repeat\",\"type\":\"bool\"},{\"name\":\"result\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":\"Delegator\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":{\"keccak256\":\"0x165a684e10b07f1afaa676434ab2aa0746d74cea21e2b8fdcfc9588850cd314a\",\"urls\":[\"bzzr://753f4773cbf720a872b459436a84e6ccfedd0b7b7f194b4bf90ae8e325ddfced\",\"dweb:/ipfs/QmNrm6SMfkvQm7XQbEExnxCopTmLCzmb8i4sva8nBXCSjc\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
   "source": "pragma solidity 0.5.10;\n\n// import \"../../contracts/contracts/Delegator.sol\";\ninterface Delegator {\n    function getResult(uint256 id) external view returns (uint256);\n    function getJob(uint256 id) external view returns(string memory url, string memory selector, string memory name, bool repeat, uint256 result);\n}\n\ncontract King {\n    Delegator public delegator;\n    uint256[] public jobs;\n    uint256 public numJobs = 0;\n    uint256 public king = 0;\n    uint256[] public lastResults;\n\n    constructor() public {\n        delegator = Delegator(0x058EF5a3d450A2fac5d24dDc75d516A136AE3f62);\n    }\n\n    function addFeed(uint256 jobId) public {\n        jobs.push(jobId);\n        numJobs = numJobs + 1;\n        lastResults.push(0);\n    }\n\n    function findKing() public {\n        uint256 highestGain = 0;\n        uint256 highestGainer = 0;\n        uint256 leastLoss = 0;\n        uint256 leastLoser = 0;\n        // uint256 newKing = 0;\n        for(uint256 i = 0; i < jobs.length; i++) {\n            uint256 price = delegator.getResult(jobs[i]);\n            if(price > lastResults[i]) {\n                if(price - lastResults[i] > highestGain) {\n                    highestGain = price - lastResults[i];\n                    highestGainer = jobs[i];\n                }\n            } else if(price < lastResults[i]) {\n                    if(lastResults[i] - price < leastLoss) {\n                        leastLoss = lastResults[i] - price;\n                        leastLoser = jobs[i];\n                    }\n                }\n\n            lastResults[i] = price;\n        // king = newKing;\n        }\n        if (highestGain > 0) {\n            king = highestGainer;\n        } else if (leastLoss > 0) {\n            king = leastLoser;\n        }\n    }\n}\n",
   "sourcePath": "/Users/hrishi/king-of-crypto/contracts/King.sol",
   "ast": {
@@ -5136,22 +5081,9 @@
     "name": "solc",
     "version": "0.5.10+commit.5a6ea5b1.Emscripten.clang"
   },
-  "networks": {
-    "5": {
-      "events": {},
-      "links": {},
-      "address": "0x45d0B49C8301958B37349F365fD23ffAd150Fee4",
-      "transactionHash": "0x3b815bcb13d304d4f08c6f20c9e2abeccf0c7d867fa4c91dda3cde384a983e41"
-    },
-    "1575130417805": {
-      "events": {},
-      "links": {},
-      "address": "0x9cCA28d98EC895c50C266b7f138dD6316aADB52A",
-      "transactionHash": "0xa69ba05a7dabc385c1ce6a90c14f9337536ca6c71b1a6e29265b7f8f5b770246"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-12-02T10:13:13.182Z",
+  "updatedAt": "2019-12-02T10:11:17.733Z",
   "devdoc": {
     "methods": {}
   },

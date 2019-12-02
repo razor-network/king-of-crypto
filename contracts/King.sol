@@ -1,23 +1,19 @@
 pragma solidity 0.5.10;
 
-import "../../contracts/contracts/Delegator.sol";
-
+interface Razor {
+    function getResult(uint256 id) external view returns (uint256);
+    function getJob(uint256 id) external view returns(string memory url, string memory selector, string memory name, bool repeat, uint256 result);
+}
 
 contract King {
-    Delegator public delegator;
+    Razor public razor;
     uint256[] public jobs;
     uint256 public numJobs = 0;
     uint256 public king = 0;
     uint256[] public lastResults;
 
     constructor() public {
-        delegator = Delegator(0x058EF5a3d450A2fac5d24dDc75d516A136AE3f62);
-    }
-
-    function test() public view returns(uint256) {
-        // (, , , , uint256 price) = delegator.getJob(0);
-        uint256 price = delegator.getResult(1);
-        return price;
+        razor = Razor(0x058EF5a3d450A2fac5d24dDc75d516A136AE3f62);
     }
 
     function addFeed(uint256 jobId) public {
@@ -33,7 +29,7 @@ contract King {
         uint256 leastLoser = 0;
         // uint256 newKing = 0;
         for(uint256 i = 0; i < jobs.length; i++) {
-            uint256 price = delegator.getResult(jobs[i]);
+            uint256 price = razor.getResult(jobs[i]);
             if(price > lastResults[i]) {
                 if(price - lastResults[i] > highestGain) {
                     highestGain = price - lastResults[i];
