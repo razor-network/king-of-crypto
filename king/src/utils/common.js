@@ -39,17 +39,6 @@ export const enableEth = async () => {
 }
 
 export const EventBus = new Vue()
-// export const request = async (jobId) => {
-//   const res = await Oracle.methods.getJob(jobId).call()
-//   const id = web3.utils.soliditySha3(res.url, res.selector)
-
-// const accounts = await web3.eth.getAccounts()
-
-// return {
-// id,
-// tx: res.transactionHash
-// }
-// }
 
 export const getNetwork = async () => {
     let id = await web3.eth.net.getId()
@@ -73,10 +62,6 @@ export const getKing = () => {
     return King.methods.king().call()
 }
 
-export const test = () => {
-    return King.methods.test().call()
-}
-
 export const getJobs = async () => {
     let numJobs = await King.methods.numJobs().call()
     let jobs = []
@@ -87,6 +72,7 @@ export const getJobs = async () => {
     }
     return jobs
 }
+
 export const getJob = async (id) => {
     return Delegator.methods.getJob(id).call()
 }

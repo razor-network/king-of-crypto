@@ -1,29 +1,33 @@
 <template>
 <div class="hello">
     <h1>{{ msg }}</h1>
-    <p> <button @click="refresh"> Refresh </button> </p>
-    <p> The king of crypto is</p>
-    <h2>{{job.name}} </h2>
-    <p> Change: {{change}}% </p>
-    <p> Jobs: {{jobs}} </p>
+<p> This is a sample dApp created using Razor oracle network. The app does following things:</p>
+<p>1. Get prices of different cryptocurrencies from Razor Oracle Network</p>
+<p>2. Find the biggest gainer since last calculation. This is the King of Crypto.</p>
+<p>3. If all cryptocurrencies lost value, find the crypto with least loss. This is the King of Crypto. </p>
 
     <h3> Add datafeed </h3>
     <input v-model="datafeedId" type="number" min="0" max="20" step="1" />
-    <button @click = "addDatafeed" > Add datafeed</button>
+    <button @click="addDatafeed"> Add datafeed</button>
+    <p> Datafeeds: {{jobs}} </p>
+
+    <h3> The king of crypto is</h3>
+    <h2>{{job.name}} </h2>
+    <p> <button @click="refresh"> Calculate the current king </button> </p>
+
 
 </div>
 </template>
 
 <script>
 import {
-  enableEth,
-  findKing,
-  getKing,
-  addDatafeed,
-  getJobs,
-  getJob,
-  test
-  // getNetwork
+    enableEth,
+    findKing,
+    getKing,
+    addDatafeed,
+    getJobs,
+    getJob
+    // getNetwork
 } from '@/utils/common'
 export default {
     name: 'HelloWorld',
@@ -33,12 +37,11 @@ export default {
     data: function() {
         return {
             jobs: [],
-            king:'wait...',
-            change:0,
-            datafeedId:0,
+            king: 'wait...',
+            datafeedId: 0,
             test: 'wait',
             job: 'wait...',
-            name:'wait..'
+            name: 'wait..'
         }
     },
     async mounted() {
@@ -61,9 +64,6 @@ export default {
         },
         getJobs: async function() {
             this.jobs = await getJobs()
-        },
-        testFunction: async function() {
-            this.test = await test()
         },
         getJob: async function(id) {
             // console.log('getJob', id)
