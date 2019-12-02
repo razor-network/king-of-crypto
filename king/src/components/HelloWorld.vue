@@ -6,6 +6,12 @@
 <p>2. Find the biggest gainer since last calculation. This is the King of Crypto.</p>
 <p>3. If all cryptocurrencies lost value, find the crypto with least loss. This is the King of Crypto. </p>
 
+<h2> Instructions:</h2>
+Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to görli. You will need some görli ether to pay transaction fees.
+<p> 1. Add datafeeds. e.g. 1,2,5. Wait for a few minutes for tx to confirm. </p>
+<p> 2. Click "Calculate the current king" Wait for a few minutes for tx to confirm.  </p>
+<p> 3. Refresh the page to see the new king of crypto. </p>
+
     <h3> Add datafeed </h3>
     <input v-model="datafeedId" type="number" min="1" max="20" step="1" />
     <button @click="addDatafeed"> Add datafeed</button>

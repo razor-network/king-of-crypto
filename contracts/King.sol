@@ -27,7 +27,6 @@ contract King {
         uint256 highestGainer = 0;
         uint256 leastLoss = 0;
         uint256 leastLoser = 0;
-        // uint256 newKing = 0;
         for(uint256 i = 0; i < jobs.length; i++) {
             uint256 price = razor.getResult(jobs[i]);
             if(price > lastResults[i]) {
@@ -43,7 +42,6 @@ contract King {
                 }
 
             lastResults[i] = price;
-        // king = newKing;
         }
         if (highestGain > 0) {
             king = highestGainer;
