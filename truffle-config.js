@@ -24,6 +24,16 @@ module.exports = {
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     },
 
+    matic: {
+      provider: () => new HDWalletProvider(mnemonic, 'https://testnet2.matic.network'),
+      network_id: 8995,
+      gas: 8000000,
+      confirmations: 0,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      gasPrice:0
+    },
+
   },
 
   // Set default mocha options here, use special reporters etc.
