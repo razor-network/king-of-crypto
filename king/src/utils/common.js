@@ -6,7 +6,7 @@ import KingBuild from '../../../build/contracts/King.json'
 let web3
 let accounts
 
-let networkId = 5
+let networkId = 1
 
 let King
 let Delegator
@@ -123,7 +123,7 @@ let DelegatorAbi =  [
       "type": "function"
     }
   ]
-  
+
 export const enableEth = async () => {
     if (typeof window.ethereum === 'undefined' ||
         typeof window.web3 === 'undefined') {
