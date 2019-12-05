@@ -2,3 +2,4 @@
 .infura
 .skale
 build/
+node_modules/

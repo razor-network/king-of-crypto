@@ -13,7 +13,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x058EF5a3d450A2fac5d24dDc75d516A136AE3f62);
+        razor = Razor(0x1AE452c743791f0265611A3647deBEB2857a401d);
     }
 
     function addFeed(uint256 jobId) public {

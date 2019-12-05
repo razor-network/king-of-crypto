@@ -1,11 +1,20 @@
 <template>
 <div class="hello">
     <h1>{{ msg }}</h1>
-<p> This is a sample dApp created using Razor oracle network. The app does following things:</p>
-<p>1. Get prices of different cryptocurrencies from Razor Oracle Network</p>
-<p>2. Find the biggest gainer since last calculation. This is the King of Crypto.</p>
-<p>3. If all cryptocurrencies lost value, find the crypto with least loss. This is the King of Crypto. </p>
+    <p> This is a sample dApp created using Razor oracle network. The app does following things:</p>
+    <p>1. Get prices of different cryptocurrencies from Razor Oracle Network</p>
+    <p>2. Find the biggest gainer since last calculation. This is the King of Crypto.</p>
+    <p>3. If all cryptocurrencies lost value, find the crypto with least loss. This is the King of Crypto. </p>
 
+    <h2> Instructions </h2>
+    Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the correct network.
+
+
+    <p>1. Add datafeeds. e.g. 1,2,5. Wait for a few minutes for tx to confirm. </p>
+
+    <p>2. Click "Calculate the current king" Wait for a few minutes for tx to confirm. </p>
+
+    <p>3. Refresh the page to see the new king of crypto.</p>
 
     <h3> Add datafeed </h3>
     <input v-model="datafeedId" type="number" min="1" max="20" step="1" />
@@ -27,7 +36,8 @@ import {
     getKing,
     addDatafeed,
     getJobs,
-    getJob
+    getJob,
+    test
     // getNetwork
 } from '@/utils/common'
 export default {
@@ -38,7 +48,7 @@ export default {
     data: function() {
         return {
             jobs: [],
-            king: 'wait...',
+            king: 0,
             datafeedId: 0,
             test: 'wait',
             job: 'wait...',
@@ -47,11 +57,14 @@ export default {
     },
     async mounted() {
         await enableEth()
+        await this.testy()
         await this.getKing()
-        await this.getJob(this.king)
-        // this.name = this.job.name
+        if (this.king !== 0) {
+            // console.log('not null')
+            await this.getJob(this.king)
+        }
+        this.name = this.job.name
         await this.getJobs()
-        await this.testFunction()
     },
     methods: {
         refresh: async function() {
@@ -69,6 +82,9 @@ export default {
         getJob: async function(id) {
             // console.log('getJob', id)
             this.job = await getJob(id)
+        },
+        testy: async function() {
+            await test()
         }
 
     }

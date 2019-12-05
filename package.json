@@ -1,0 +1,26 @@
+{
+  "name": "king-of-crypto",
+  "version": "1.0.0",
+  "description": "Check out [https://docs.razor.network/tutorial/](https://docs.razor.network/tutorial/) for the instructions",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razor-network/king-of-crypto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/razor-network/king-of-crypto/issues"
+  },
+  "homepage": "https://github.com/razor-network/king-of-crypto#readme",
+  "dependencies": {
+    "truffle": "^5.0.34",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
