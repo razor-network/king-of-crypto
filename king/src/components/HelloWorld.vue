@@ -36,8 +36,7 @@ import {
     getKing,
     addDatafeed,
     getJobs,
-    getJob,
-    test
+    getJob
     // getNetwork
 } from '@/utils/common'
 export default {
@@ -50,17 +49,14 @@ export default {
             jobs: [],
             king: 0,
             datafeedId: 0,
-            test: 'wait',
             job: 'wait...',
             name: 'wait..'
         }
     },
     async mounted() {
         await enableEth()
-        await this.testy()
         await this.getKing()
         if (this.king !== 0) {
-            // console.log('not null')
             await this.getJob(this.king)
         }
         this.name = this.job.name
@@ -82,9 +78,6 @@ export default {
         getJob: async function(id) {
             // console.log('getJob', id)
             this.job = await getJob(id)
-        },
-        testy: async function() {
-            await test()
         }
 
     }
