@@ -40,7 +40,7 @@ module.exports = {
       provider: () => new HDWalletProvider(mnemonic, skale),
       network_id: '*',
       gas: 8000000,
-      confirmations: 0,
+      confirmations: 1,
       timeoutBlocks: 200,
       skipDryRun: true,
       gasPrice:0

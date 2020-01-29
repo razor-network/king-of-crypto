@@ -47,6 +47,9 @@ contract King {
             king = highestGainer;
         } else if (leastLoss > 0) {
             king = leastLoser;
+        } else {
+            //if no king found, declare ETH as king
+            king = 1;
         }
     }
 }
