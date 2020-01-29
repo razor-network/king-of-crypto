@@ -7,7 +7,16 @@ let web3
 let accounts
 
 let networkId = 8995
-let razorAddress = '0x1AE452c743791f0265611A3647deBEB2857a401d'
+let razorAddress
+if (process.env.VUE_APP_NETWORK === "matic") {
+    razorAddress = '0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4'
+    networkId = 8995
+} else if (process.env.VUE_APP_NETWORK === "skale") {
+    razorAddress = '0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09'
+    networkId = 1
+} else {
+    alert('environment variable VUE_APP_NETWORK not set!')
+}
 
 let King
 let Razor

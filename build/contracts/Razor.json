@@ -56,12 +56,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getResult\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getJob\",\"outputs\":[{\"name\":\"url\",\"type\":\"string\"},{\"name\":\"selector\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"repeat\",\"type\":\"bool\"},{\"name\":\"result\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":\"Razor\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":{\"keccak256\":\"0xb563f53014ebdedc7c133f1e7441c0009168edd04caa5534fe296eddf27466da\",\"urls\":[\"bzzr://2e7cd50a5b16324ab1d777e291212b9617d1ddd911c47c0614a12e22f1358322\",\"dweb:/ipfs/QmPgBFCtRD4xCGq66HwHKuwF7EpPL35A474GPVesQPtj1v\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getResult\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getJob\",\"outputs\":[{\"name\":\"url\",\"type\":\"string\"},{\"name\":\"selector\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"repeat\",\"type\":\"bool\"},{\"name\":\"result\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":\"Razor\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":{\"keccak256\":\"0xab70ce037c6fa9922f981ac8938ba452e709ad9aa08a4c2719032957227683cb\",\"urls\":[\"bzzr://3c9ff81c7d8265607f7918ec5c9db7517a4ca8ad01ce62f74f1c6122b35f2a25\",\"dweb:/ipfs/QmfU4VPrGcr9QW3iG86rxVoUiaAEb5L2fugJqAm25ReYcB\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.5.10;\n\ninterface Razor {\n    function getResult(uint256 id) external view returns (uint256);\n    function getJob(uint256 id) external view returns(string memory url, string memory selector, string memory name, bool repeat, uint256 result);\n}\n\ncontract King {\n    Razor public razor;\n    uint256[] public jobs;\n    uint256 public numJobs = 0;\n    uint256 public king = 0;\n    uint256[] public lastResults;\n\n    constructor() public {\n        razor = Razor(0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4);\n    }\n\n    function addFeed(uint256 jobId) public {\n        jobs.push(jobId);\n        numJobs = numJobs + 1;\n        lastResults.push(0);\n    }\n\n    function findKing() public {\n        uint256 highestGain = 0;\n        uint256 highestGainer = 0;\n        uint256 leastLoss = 0;\n        uint256 leastLoser = 0;\n        for(uint256 i = 0; i < jobs.length; i++) {\n            uint256 price = razor.getResult(jobs[i]);\n            if(price > lastResults[i]) {\n                if(price - lastResults[i] > highestGain) {\n                    highestGain = price - lastResults[i];\n                    highestGainer = jobs[i];\n                }\n            } else if(price < lastResults[i]) {\n                    if(lastResults[i] - price < leastLoss) {\n                        leastLoss = lastResults[i] - price;\n                        leastLoser = jobs[i];\n                    }\n                }\n\n            lastResults[i] = price;\n        }\n        if (highestGain > 0) {\n            king = highestGainer;\n        } else if (leastLoss > 0) {\n            king = leastLoser;\n        }\n    }\n}\n",
+  "source": "pragma solidity 0.5.10;\n\ninterface Razor {\n    function getResult(uint256 id) external view returns (uint256);\n    function getJob(uint256 id) external view returns(string memory url, string memory selector, string memory name, bool repeat, uint256 result);\n}\n\ncontract King {\n    Razor public razor;\n    uint256[] public jobs;\n    uint256 public numJobs = 0;\n    uint256 public king = 0;\n    uint256[] public lastResults;\n\n    constructor() public {\n        razor = Razor(0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09);\n    }\n\n    function addFeed(uint256 jobId) public {\n        jobs.push(jobId);\n        numJobs = numJobs + 1;\n        lastResults.push(0);\n    }\n\n    function findKing() public {\n        uint256 highestGain = 0;\n        uint256 highestGainer = 0;\n        uint256 leastLoss = 0;\n        uint256 leastLoser = 0;\n        for(uint256 i = 0; i < jobs.length; i++) {\n            uint256 price = razor.getResult(jobs[i]);\n            if(price > lastResults[i]) {\n                if(price - lastResults[i] > highestGain) {\n                    highestGain = price - lastResults[i];\n                    highestGainer = jobs[i];\n                }\n            } else if(price < lastResults[i]) {\n                    if(lastResults[i] - price < leastLoss) {\n                        leastLoss = lastResults[i] - price;\n                        leastLoser = jobs[i];\n                    }\n                }\n\n            lastResults[i] = price;\n        }\n        if (highestGain > 0) {\n            king = highestGainer;\n        } else if (leastLoss > 0) {\n            king = leastLoser;\n        }\n    }\n}\n",
   "sourcePath": "/Users/hrishi/king-of-crypto/contracts/King.sol",
   "ast": {
     "absolutePath": "/Users/hrishi/king-of-crypto/contracts/King.sol",
@@ -602,7 +602,7 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "hexValue": "307834396231366631653135643631314463463837623941334535314638364334316232616135364534",
+                          "hexValue": "307846463637433835443265313739664546623334323841653639303961396130433630634635643039",
                           "id": 43,
                           "isConstant": false,
                           "isLValue": false,
@@ -616,7 +616,7 @@
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
                           },
-                          "value": "0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4"
+                          "value": "0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09"
                         }
                       ],
                       "expression": {
@@ -3109,7 +3109,7 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "hexValue": "307834396231366631653135643631314463463837623941334535314638364334316232616135364534",
+                          "hexValue": "307846463637433835443265313739664546623334323841653639303961396130433630634635643039",
                           "id": 43,
                           "isConstant": false,
                           "isLValue": false,
@@ -3123,7 +3123,7 @@
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
                           },
-                          "value": "0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4"
+                          "value": "0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09"
                         }
                       ],
                       "expression": {
@@ -5082,8 +5082,8 @@
     "version": "0.5.10+commit.5a6ea5b1.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.19",
-  "updatedAt": "2019-12-24T04:27:49.917Z",
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-01-29T11:28:55.934Z",
   "devdoc": {
     "methods": {}
   },

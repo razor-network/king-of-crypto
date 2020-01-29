@@ -23,7 +23,6 @@ export default {
     },
     methods: {
         refresh: async function() {
-            alert('lol')
         }
     }
 }
