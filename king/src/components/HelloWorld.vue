@@ -21,7 +21,7 @@
     <button @click="addDatafeed"> Add datafeed</button>
     <p> Datafeeds: {{jobs}} </p>
 
-    <h3> The king of crypto is Job Id {{king}}</h3>
+    <h3> The king of crypto is Datafeed Id {{king}}</h3>
     <h2>{{name}} </h2>
     <p> <button @click="refresh"> Calculate the current king </button> </p>
 
