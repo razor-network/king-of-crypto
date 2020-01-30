@@ -13,7 +13,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09);
+        razor = Razor(0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e);
     }
 
     function addFeed(uint256 jobId) public {
@@ -47,9 +47,6 @@ contract King {
             king = highestGainer;
         } else if (leastLoss > 0) {
             king = leastLoser;
-        } else {
-            //if no king found, declare ETH as king
-            king = 1;
         }
     }
 }

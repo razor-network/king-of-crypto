@@ -6,17 +6,9 @@ import KingBuild from '../../../build/contracts/King.json'
 let web3
 let accounts
 
-let networkId = 8995
+let networkId
 let razorAddress
-if (process.env.VUE_APP_NETWORK === "matic") {
-    razorAddress = '0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4'
-    networkId = 8995
-} else if (process.env.VUE_APP_NETWORK === "skale") {
-    razorAddress = '0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09'
-    networkId = 1
-} else {
-    alert('environment variable VUE_APP_NETWORK not set!')
-}
+
 
 let King
 let Razor
@@ -177,6 +169,18 @@ export const enableEth = async () => {
         // ask them to sign in and reveal their accounts:
         accounts = await window.ethereum.enable()
         web3 = new Web3(window.web3.currentProvider)
+        if (process.env.VUE_APP_NETWORK === "matic") {
+            razorAddress = '0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4'
+            networkId = 8995
+        } else if (process.env.VUE_APP_NETWORK === "skale") {
+            razorAddress = '0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e'
+            networkId = 1
+        } else {
+            alert('environment variable VUE_APP_NETWORK not set!')
+        }
+        // alert(networkId)
+        // alert(KingBuild.networks[networkId].address)
+        // console.log(networkId, KingBuild.networks[networkId].address)
         King = new web3.eth.Contract(KingBuild.abi, KingBuild.networks[networkId].address, {
             transactionConfirmationBlocks: 0,
             gas: 5000000,
@@ -202,7 +206,7 @@ export const addDatafeed = (id) => {
     })
 }
 
-export const getKing = () => {
+export const getKing = async () => {
     return King.methods.king().call({})
 }
 

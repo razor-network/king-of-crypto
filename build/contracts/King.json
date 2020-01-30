@@ -111,24 +111,24 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"jobs\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"lastResults\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"razor\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"numJobs\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"jobId\",\"type\":\"uint256\"}],\"name\":\"addFeed\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"king\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"findKing\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":\"King\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":{\"keccak256\":\"0x2942f049686cff716da80123bcd0b2df0e37ae8b10d934b3e86e8c85e515fe4e\",\"urls\":[\"bzzr://30b0556e4399b726c39370babc008983669e9891fc9668a687f6cbb783d8ad40\",\"dweb:/ipfs/QmV2S3BdUiUrfSeKhexdfy5GZJHvTRrW6ekv5LA3KZHPcb\"]}},\"version\":1}",
-  "bytecode": "0x60806040526000600255600060035534801561001a57600080fd5b5073ff67c85d2e179fefb3428ae6909a9a0c60cf5d096000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061051d8061007e6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80639212051c1161005b5780639212051c14610150578063b7e785b61461016e578063cc181ca81461019c578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c4578063426dbe4e14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61015861022b565b6040518082815260200191505060405180910390f35b61019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610231565b005b6101a4610299565b6040518082815260200191505060405180910390f35b6101c261029f565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600181908060018154018082558091505090600182039060005260206000200160009091929091909150555060016002540160028190555060046000908060018154018082558091505090600182039060005260206000200160009091929091909150555050565b60035481565b600080905060008090506000809050600080905060008090505b6001805490508110156104ad5760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061031257fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035157600080fd5b505afa158015610365573d6000803e3d6000fd5b505050506040513d602081101561037b57600080fd5b810190808051906020019092919050505090506004828154811061039b57fe5b906000526020600020015481111561040a5785600483815481106103bb57fe5b90600052602060002001548203111561040557600482815481106103db57fe5b906000526020600020015481039550600182815481106103f757fe5b906000526020600020015494505b610483565b6004828154811061041757fe5b90600052602060002001548110156104825783816004848154811061043857fe5b906000526020600020015403101561048157806004838154811061045857fe5b90600052602060002001540393506001828154811061047357fe5b906000526020600020015492505b5b5b806004838154811061049157fe5b90600052602060002001819055505080806001019150506102b9565b5060008411156104c357826003819055506104e2565b60008211156104d857806003819055506104e1565b60016003819055505b5b5050505056fea265627a7a7230582008c2cf6e3a346dc3f7fba1a8264a8375e44f04542e9dfdb1e7120609e60e906464736f6c634300050a0032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80639212051c1161005b5780639212051c14610150578063b7e785b61461016e578063cc181ca81461019c578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c4578063426dbe4e14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61015861022b565b6040518082815260200191505060405180910390f35b61019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610231565b005b6101a4610299565b6040518082815260200191505060405180910390f35b6101c261029f565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600181908060018154018082558091505090600182039060005260206000200160009091929091909150555060016002540160028190555060046000908060018154018082558091505090600182039060005260206000200160009091929091909150555050565b60035481565b600080905060008090506000809050600080905060008090505b6001805490508110156104ad5760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061031257fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035157600080fd5b505afa158015610365573d6000803e3d6000fd5b505050506040513d602081101561037b57600080fd5b810190808051906020019092919050505090506004828154811061039b57fe5b906000526020600020015481111561040a5785600483815481106103bb57fe5b90600052602060002001548203111561040557600482815481106103db57fe5b906000526020600020015481039550600182815481106103f757fe5b906000526020600020015494505b610483565b6004828154811061041757fe5b90600052602060002001548110156104825783816004848154811061043857fe5b906000526020600020015403101561048157806004838154811061045857fe5b90600052602060002001540393506001828154811061047357fe5b906000526020600020015492505b5b5b806004838154811061049157fe5b90600052602060002001819055505080806001019150506102b9565b5060008411156104c357826003819055506104e2565b60008211156104d857806003819055506104e1565b60016003819055505b5b5050505056fea265627a7a7230582008c2cf6e3a346dc3f7fba1a8264a8375e44f04542e9dfdb1e7120609e60e906464736f6c634300050a0032",
-  "sourceMap": "261:1434:0:-;;;357:1;332:26;;386:1;364:23;;428:95;8:9:-1;5:2;;;30:1;27;20:12;5:2;428:95:0;473:42;459:5;;:57;;;;;;;;;;;;;;;;;;261:1434;;;;;;",
-  "deployedSourceMap": "261:1434:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;261:1434:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;305:21;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;305:21:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;393:28;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;393:28:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;281:18;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;332:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;529:132;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;529:132:0;;;;;;;;;;;;;;;;;:::i;:::-;;364:23;;;:::i;:::-;;;;;;;;;;;;;;;;;;;667:1026;;;:::i;:::-;;305:21;;;;;;;;;;;;;;;;;;;;;;;;;:::o;393:28::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;281:18::-;;;;;;;;;;;;;:::o;332:26::-;;;;:::o;529:132::-;578:4;588:5;578:16;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;578:16:0;;;;;;;;;;;;;;;;;;;;;;624:1;614:7;;:11;604:7;:21;;;;635:11;652:1;635:19;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;635:19:0;;;;;;;;;;;;;;;;;;;;;;529:132;:::o;364:23::-;;;;:::o;667:1026::-;704:19;726:1;704:23;;737:21;761:1;737:25;;772:17;792:1;772:21;;803:18;824:1;803:22;;839:9;851:1;839:13;;835:619;858:4;:11;;;;854:1;:15;835:619;;;890:13;906:5;;;;;;;;;;;:15;;;922:4;927:1;922:7;;;;;;;;;;;;;;;;906:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;906:24:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;906:24:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;906:24:0;;;;;;;;;;;;;;;;890:40;;955:11;967:1;955:14;;;;;;;;;;;;;;;;947:5;:22;944:463;;;1017:11;1000;1012:1;1000:14;;;;;;;;;;;;;;;;992:5;:22;:36;989:163;;;1074:11;1086:1;1074:14;;;;;;;;;;;;;;;;1066:5;:22;1052:36;;1126:4;1131:1;1126:7;;;;;;;;;;;;;;;;1110:23;;989:163;944:463;;;1183:11;1195:1;1183:14;;;;;;;;;;;;;;;;1175:5;:22;1172:235;;;1249:9;1241:5;1224:11;1236:1;1224:14;;;;;;;;;;;;;;;;:22;:34;1221:168;;;1315:5;1298:11;1310:1;1298:14;;;;;;;;;;;;;;;;:22;1286:34;;1359:4;1364:1;1359:7;;;;;;;;;;;;;;;;1346:20;;1221:168;1172:235;944:463;1438:5;1421:11;1433:1;1421:14;;;;;;;;;;;;;;;:22;;;;835:619;871:3;;;;;;;835:619;;;;1481:1;1467:11;:15;1463:224;;;1505:13;1498:4;:20;;;;1463:224;;;1551:1;1539:9;:13;1535:152;;;1575:10;1568:4;:17;;;;1535:152;;;1675:1;1668:4;:8;;;;1535:152;1463:224;667:1026;;;;:::o",
-  "source": "pragma solidity 0.5.10;\n\ninterface Razor {\n    function getResult(uint256 id) external view returns (uint256);\n    function getJob(uint256 id) external view returns(string memory url, string memory selector, string memory name, bool repeat, uint256 result);\n}\n\ncontract King {\n    Razor public razor;\n    uint256[] public jobs;\n    uint256 public numJobs = 0;\n    uint256 public king = 0;\n    uint256[] public lastResults;\n\n    constructor() public {\n        razor = Razor(0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09);\n    }\n\n    function addFeed(uint256 jobId) public {\n        jobs.push(jobId);\n        numJobs = numJobs + 1;\n        lastResults.push(0);\n    }\n\n    function findKing() public {\n        uint256 highestGain = 0;\n        uint256 highestGainer = 0;\n        uint256 leastLoss = 0;\n        uint256 leastLoser = 0;\n        for(uint256 i = 0; i < jobs.length; i++) {\n            uint256 price = razor.getResult(jobs[i]);\n            if(price > lastResults[i]) {\n                if(price - lastResults[i] > highestGain) {\n                    highestGain = price - lastResults[i];\n                    highestGainer = jobs[i];\n                }\n            } else if(price < lastResults[i]) {\n                    if(lastResults[i] - price < leastLoss) {\n                        leastLoss = lastResults[i] - price;\n                        leastLoser = jobs[i];\n                    }\n                }\n\n            lastResults[i] = price;\n        }\n        if (highestGain > 0) {\n            king = highestGainer;\n        } else if (leastLoss > 0) {\n            king = leastLoser;\n        } else {\n            //if no king found, declare ETH as king\n            king = 1;\n        }\n    }\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"jobs\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"lastResults\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"razor\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"numJobs\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"jobId\",\"type\":\"uint256\"}],\"name\":\"addFeed\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"king\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"findKing\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":\"King\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":{\"keccak256\":\"0x0a39898685ede739038150675114e46dc521a2e2b78a01b4cc4093d28326f65d\",\"urls\":[\"bzzr://3c75fbcc6bdc56fd61a5d9bbf2523598916524ddc9f1feff480e23638430419b\",\"dweb:/ipfs/QmcdSCGNdPvhCs2mxXFtdbxL3Q4tfuoysFpBVvwXseTh5D\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000600255600060035534801561001a57600080fd5b50733be8b3ea5cb7d7d19032a56d3adf1f0f8e97e34e6000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506105108061007e6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80639212051c1161005b5780639212051c14610150578063b7e785b61461016e578063cc181ca81461019c578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c4578063426dbe4e14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61015861022b565b6040518082815260200191505060405180910390f35b61019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610231565b005b6101a4610299565b6040518082815260200191505060405180910390f35b6101c261029f565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600181908060018154018082558091505090600182039060005260206000200160009091929091909150555060016002540160028190555060046000908060018154018082558091505090600182039060005260206000200160009091929091909150555050565b60035481565b600080905060008090506000809050600080905060008090505b6001805490508110156104ad5760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061031257fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035157600080fd5b505afa158015610365573d6000803e3d6000fd5b505050506040513d602081101561037b57600080fd5b810190808051906020019092919050505090506004828154811061039b57fe5b906000526020600020015481111561040a5785600483815481106103bb57fe5b90600052602060002001548203111561040557600482815481106103db57fe5b906000526020600020015481039550600182815481106103f757fe5b906000526020600020015494505b610483565b6004828154811061041757fe5b90600052602060002001548110156104825783816004848154811061043857fe5b906000526020600020015403101561048157806004838154811061045857fe5b90600052602060002001540393506001828154811061047357fe5b906000526020600020015492505b5b5b806004838154811061049157fe5b90600052602060002001819055505080806001019150506102b9565b5060008411156104c357826003819055506104d5565b60008211156104d457806003819055505b5b5050505056fea265627a7a72305820b4a786f69267a139b6cec9172f7faca2687159102a2a523f42277679b7cf738b64736f6c634300050a0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80639212051c1161005b5780639212051c14610150578063b7e785b61461016e578063cc181ca81461019c578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c4578063426dbe4e14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61015861022b565b6040518082815260200191505060405180910390f35b61019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610231565b005b6101a4610299565b6040518082815260200191505060405180910390f35b6101c261029f565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600181908060018154018082558091505090600182039060005260206000200160009091929091909150555060016002540160028190555060046000908060018154018082558091505090600182039060005260206000200160009091929091909150555050565b60035481565b600080905060008090506000809050600080905060008090505b6001805490508110156104ad5760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061031257fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035157600080fd5b505afa158015610365573d6000803e3d6000fd5b505050506040513d602081101561037b57600080fd5b810190808051906020019092919050505090506004828154811061039b57fe5b906000526020600020015481111561040a5785600483815481106103bb57fe5b90600052602060002001548203111561040557600482815481106103db57fe5b906000526020600020015481039550600182815481106103f757fe5b906000526020600020015494505b610483565b6004828154811061041757fe5b90600052602060002001548110156104825783816004848154811061043857fe5b906000526020600020015403101561048157806004838154811061045857fe5b90600052602060002001540393506001828154811061047357fe5b906000526020600020015492505b5b5b806004838154811061049157fe5b90600052602060002001819055505080806001019150506102b9565b5060008411156104c357826003819055506104d5565b60008211156104d457806003819055505b5b5050505056fea265627a7a72305820b4a786f69267a139b6cec9172f7faca2687159102a2a523f42277679b7cf738b64736f6c634300050a0032",
+  "sourceMap": "261:1343:0:-;;;357:1;332:26;;386:1;364:23;;428:95;8:9:-1;5:2;;;30:1;27;20:12;5:2;428:95:0;473:42;459:5;;:57;;;;;;;;;;;;;;;;;;261:1343;;;;;;",
+  "deployedSourceMap": "261:1343:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;261:1343:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;305:21;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;305:21:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;393:28;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;393:28:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;281:18;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;332:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;529:132;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;529:132:0;;;;;;;;;;;;;;;;;:::i;:::-;;364:23;;;:::i;:::-;;;;;;;;;;;;;;;;;;;667:935;;;:::i;:::-;;305:21;;;;;;;;;;;;;;;;;;;;;;;;;:::o;393:28::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;281:18::-;;;;;;;;;;;;;:::o;332:26::-;;;;:::o;529:132::-;578:4;588:5;578:16;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;578:16:0;;;;;;;;;;;;;;;;;;;;;;624:1;614:7;;:11;604:7;:21;;;;635:11;652:1;635:19;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;635:19:0;;;;;;;;;;;;;;;;;;;;;;529:132;:::o;364:23::-;;;;:::o;667:935::-;704:19;726:1;704:23;;737:21;761:1;737:25;;772:17;792:1;772:21;;803:18;824:1;803:22;;839:9;851:1;839:13;;835:619;858:4;:11;;;;854:1;:15;835:619;;;890:13;906:5;;;;;;;;;;;:15;;;922:4;927:1;922:7;;;;;;;;;;;;;;;;906:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;906:24:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;906:24:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;906:24:0;;;;;;;;;;;;;;;;890:40;;955:11;967:1;955:14;;;;;;;;;;;;;;;;947:5;:22;944:463;;;1017:11;1000;1012:1;1000:14;;;;;;;;;;;;;;;;992:5;:22;:36;989:163;;;1074:11;1086:1;1074:14;;;;;;;;;;;;;;;;1066:5;:22;1052:36;;1126:4;1131:1;1126:7;;;;;;;;;;;;;;;;1110:23;;989:163;944:463;;;1183:11;1195:1;1183:14;;;;;;;;;;;;;;;;1175:5;:22;1172:235;;;1249:9;1241:5;1224:11;1236:1;1224:14;;;;;;;;;;;;;;;;:22;:34;1221:168;;;1315:5;1298:11;1310:1;1298:14;;;;;;;;;;;;;;;;:22;1286:34;;1359:4;1364:1;1359:7;;;;;;;;;;;;;;;;1346:20;;1221:168;1172:235;944:463;1438:5;1421:11;1433:1;1421:14;;;;;;;;;;;;;;;:22;;;;835:619;871:3;;;;;;;835:619;;;;1481:1;1467:11;:15;1463:133;;;1505:13;1498:4;:20;;;;1463:133;;;1551:1;1539:9;:13;1535:61;;;1575:10;1568:4;:17;;;;1535:61;1463:133;667:935;;;;:::o",
+  "source": "pragma solidity 0.5.10;\n\ninterface Razor {\n    function getResult(uint256 id) external view returns (uint256);\n    function getJob(uint256 id) external view returns(string memory url, string memory selector, string memory name, bool repeat, uint256 result);\n}\n\ncontract King {\n    Razor public razor;\n    uint256[] public jobs;\n    uint256 public numJobs = 0;\n    uint256 public king = 0;\n    uint256[] public lastResults;\n\n    constructor() public {\n        razor = Razor(0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e);\n    }\n\n    function addFeed(uint256 jobId) public {\n        jobs.push(jobId);\n        numJobs = numJobs + 1;\n        lastResults.push(0);\n    }\n\n    function findKing() public {\n        uint256 highestGain = 0;\n        uint256 highestGainer = 0;\n        uint256 leastLoss = 0;\n        uint256 leastLoser = 0;\n        for(uint256 i = 0; i < jobs.length; i++) {\n            uint256 price = razor.getResult(jobs[i]);\n            if(price > lastResults[i]) {\n                if(price - lastResults[i] > highestGain) {\n                    highestGain = price - lastResults[i];\n                    highestGainer = jobs[i];\n                }\n            } else if(price < lastResults[i]) {\n                    if(lastResults[i] - price < leastLoss) {\n                        leastLoss = lastResults[i] - price;\n                        leastLoser = jobs[i];\n                    }\n                }\n\n            lastResults[i] = price;\n        }\n        if (highestGain > 0) {\n            king = highestGainer;\n        } else if (leastLoss > 0) {\n            king = leastLoser;\n        }\n    }\n}\n",
   "sourcePath": "/Users/hrishi/king-of-crypto/contracts/King.sol",
   "ast": {
     "absolutePath": "/Users/hrishi/king-of-crypto/contracts/King.sol",
     "exportedSymbols": {
       "King": [
-        204
+        199
       ],
       "Razor": [
         24
       ]
     },
-    "id": 205,
+    "id": 200,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -421,7 +421,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 205,
+        "scope": 200,
         "src": "25:234:0"
       },
       {
@@ -430,9 +430,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 204,
+        "id": 199,
         "linearizedBaseContracts": [
-          204
+          199
         ],
         "name": "King",
         "nodeType": "ContractDefinition",
@@ -442,7 +442,7 @@
             "id": 26,
             "name": "razor",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "281:18:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -470,7 +470,7 @@
             "id": 29,
             "name": "jobs",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "305:21:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -506,7 +506,7 @@
             "id": 32,
             "name": "numJobs",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "332:26:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -549,7 +549,7 @@
             "id": 35,
             "name": "king",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "364:23:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -592,7 +592,7 @@
             "id": 38,
             "name": "lastResults",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "393:28:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -657,7 +657,7 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "hexValue": "307846463637433835443265313739664546623334323841653639303961396130433630634635643039",
+                          "hexValue": "307833626538623345613543623764374431393033324135364433614446314630663865393765333465",
                           "id": 43,
                           "isConstant": false,
                           "isLValue": false,
@@ -671,7 +671,7 @@
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
                           },
-                          "value": "0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09"
+                          "value": "0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e"
                         }
                       ],
                       "expression": {
@@ -737,7 +737,7 @@
               "parameters": [],
               "src": "449:0:0"
             },
-            "scope": 204,
+            "scope": 199,
             "src": "428:95:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1025,7 +1025,7 @@
               "parameters": [],
               "src": "568:0:0"
             },
-            "scope": 204,
+            "scope": 199,
             "src": "529:132:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1033,9 +1033,9 @@
           },
           {
             "body": {
-              "id": 202,
+              "id": 197,
               "nodeType": "Block",
-              "src": "694:999:0",
+              "src": "694:908:0",
               "statements": [
                 {
                   "assignments": [
@@ -1047,7 +1047,7 @@
                       "id": 76,
                       "name": "highestGain",
                       "nodeType": "VariableDeclaration",
-                      "scope": 202,
+                      "scope": 197,
                       "src": "704:19:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1101,7 +1101,7 @@
                       "id": 80,
                       "name": "highestGainer",
                       "nodeType": "VariableDeclaration",
-                      "scope": 202,
+                      "scope": 197,
                       "src": "737:21:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1155,7 +1155,7 @@
                       "id": 84,
                       "name": "leastLoss",
                       "nodeType": "VariableDeclaration",
-                      "scope": 202,
+                      "scope": 197,
                       "src": "772:17:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1209,7 +1209,7 @@
                       "id": 88,
                       "name": "leastLoser",
                       "nodeType": "VariableDeclaration",
-                      "scope": 202,
+                      "scope": 197,
                       "src": "803:18:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2476,67 +2476,10 @@
                         "typeString": "bool"
                       }
                     },
-                    "falseBody": {
-                      "id": 199,
-                      "nodeType": "Block",
-                      "src": "1602:85:0",
-                      "statements": [
-                        {
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 197,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "leftHandSide": {
-                              "argumentTypes": null,
-                              "id": 195,
-                              "name": "king",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 35,
-                              "src": "1668:4:0",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "nodeType": "Assignment",
-                            "operator": "=",
-                            "rightHandSide": {
-                              "argumentTypes": null,
-                              "hexValue": "31",
-                              "id": 196,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "kind": "number",
-                              "lValueRequested": false,
-                              "nodeType": "Literal",
-                              "src": "1675:1:0",
-                              "subdenomination": null,
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_rational_1_by_1",
-                                "typeString": "int_const 1"
-                              },
-                              "value": "1"
-                            },
-                            "src": "1668:8:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "id": 198,
-                          "nodeType": "ExpressionStatement",
-                          "src": "1668:8:0"
-                        }
-                      ]
-                    },
-                    "id": 200,
+                    "falseBody": null,
+                    "id": 195,
                     "nodeType": "IfStatement",
-                    "src": "1535:152:0",
+                    "src": "1535:61:0",
                     "trueBody": {
                       "id": 194,
                       "nodeType": "Block",
@@ -2591,9 +2534,9 @@
                       ]
                     }
                   },
-                  "id": 201,
+                  "id": 196,
                   "nodeType": "IfStatement",
-                  "src": "1463:224:0",
+                  "src": "1463:133:0",
                   "trueBody": {
                     "id": 186,
                     "nodeType": "Block",
@@ -2651,7 +2594,7 @@
               ]
             },
             "documentation": null,
-            "id": 203,
+            "id": 198,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -2669,30 +2612,30 @@
               "parameters": [],
               "src": "694:0:0"
             },
-            "scope": 204,
-            "src": "667:1026:0",
+            "scope": 199,
+            "src": "667:935:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 205,
-        "src": "261:1434:0"
+        "scope": 200,
+        "src": "261:1343:0"
       }
     ],
-    "src": "0:1696:0"
+    "src": "0:1605:0"
   },
   "legacyAST": {
     "absolutePath": "/Users/hrishi/king-of-crypto/contracts/King.sol",
     "exportedSymbols": {
       "King": [
-        204
+        199
       ],
       "Razor": [
         24
       ]
     },
-    "id": 205,
+    "id": 200,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -2985,7 +2928,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 205,
+        "scope": 200,
         "src": "25:234:0"
       },
       {
@@ -2994,9 +2937,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 204,
+        "id": 199,
         "linearizedBaseContracts": [
-          204
+          199
         ],
         "name": "King",
         "nodeType": "ContractDefinition",
@@ -3006,7 +2949,7 @@
             "id": 26,
             "name": "razor",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "281:18:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3034,7 +2977,7 @@
             "id": 29,
             "name": "jobs",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "305:21:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3070,7 +3013,7 @@
             "id": 32,
             "name": "numJobs",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "332:26:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3113,7 +3056,7 @@
             "id": 35,
             "name": "king",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "364:23:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3156,7 +3099,7 @@
             "id": 38,
             "name": "lastResults",
             "nodeType": "VariableDeclaration",
-            "scope": 204,
+            "scope": 199,
             "src": "393:28:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3221,7 +3164,7 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "hexValue": "307846463637433835443265313739664546623334323841653639303961396130433630634635643039",
+                          "hexValue": "307833626538623345613543623764374431393033324135364433614446314630663865393765333465",
                           "id": 43,
                           "isConstant": false,
                           "isLValue": false,
@@ -3235,7 +3178,7 @@
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
                           },
-                          "value": "0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09"
+                          "value": "0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e"
                         }
                       ],
                       "expression": {
@@ -3301,7 +3244,7 @@
               "parameters": [],
               "src": "449:0:0"
             },
-            "scope": 204,
+            "scope": 199,
             "src": "428:95:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3589,7 +3532,7 @@
               "parameters": [],
               "src": "568:0:0"
             },
-            "scope": 204,
+            "scope": 199,
             "src": "529:132:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3597,9 +3540,9 @@
           },
           {
             "body": {
-              "id": 202,
+              "id": 197,
               "nodeType": "Block",
-              "src": "694:999:0",
+              "src": "694:908:0",
               "statements": [
                 {
                   "assignments": [
@@ -3611,7 +3554,7 @@
                       "id": 76,
                       "name": "highestGain",
                       "nodeType": "VariableDeclaration",
-                      "scope": 202,
+                      "scope": 197,
                       "src": "704:19:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -3665,7 +3608,7 @@
                       "id": 80,
                       "name": "highestGainer",
                       "nodeType": "VariableDeclaration",
-                      "scope": 202,
+                      "scope": 197,
                       "src": "737:21:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -3719,7 +3662,7 @@
                       "id": 84,
                       "name": "leastLoss",
                       "nodeType": "VariableDeclaration",
-                      "scope": 202,
+                      "scope": 197,
                       "src": "772:17:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -3773,7 +3716,7 @@
                       "id": 88,
                       "name": "leastLoser",
                       "nodeType": "VariableDeclaration",
-                      "scope": 202,
+                      "scope": 197,
                       "src": "803:18:0",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -5040,67 +4983,10 @@
                         "typeString": "bool"
                       }
                     },
-                    "falseBody": {
-                      "id": 199,
-                      "nodeType": "Block",
-                      "src": "1602:85:0",
-                      "statements": [
-                        {
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 197,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "leftHandSide": {
-                              "argumentTypes": null,
-                              "id": 195,
-                              "name": "king",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 35,
-                              "src": "1668:4:0",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "nodeType": "Assignment",
-                            "operator": "=",
-                            "rightHandSide": {
-                              "argumentTypes": null,
-                              "hexValue": "31",
-                              "id": 196,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "kind": "number",
-                              "lValueRequested": false,
-                              "nodeType": "Literal",
-                              "src": "1675:1:0",
-                              "subdenomination": null,
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_rational_1_by_1",
-                                "typeString": "int_const 1"
-                              },
-                              "value": "1"
-                            },
-                            "src": "1668:8:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "id": 198,
-                          "nodeType": "ExpressionStatement",
-                          "src": "1668:8:0"
-                        }
-                      ]
-                    },
-                    "id": 200,
+                    "falseBody": null,
+                    "id": 195,
                     "nodeType": "IfStatement",
-                    "src": "1535:152:0",
+                    "src": "1535:61:0",
                     "trueBody": {
                       "id": 194,
                       "nodeType": "Block",
@@ -5155,9 +5041,9 @@
                       ]
                     }
                   },
-                  "id": 201,
+                  "id": 196,
                   "nodeType": "IfStatement",
-                  "src": "1463:224:0",
+                  "src": "1463:133:0",
                   "trueBody": {
                     "id": 186,
                     "nodeType": "Block",
@@ -5215,7 +5101,7 @@
               ]
             },
             "documentation": null,
-            "id": 203,
+            "id": 198,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -5233,18 +5119,18 @@
               "parameters": [],
               "src": "694:0:0"
             },
-            "scope": 204,
-            "src": "667:1026:0",
+            "scope": 199,
+            "src": "667:935:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 205,
-        "src": "261:1434:0"
+        "scope": 200,
+        "src": "261:1343:0"
       }
     ],
-    "src": "0:1696:0"
+    "src": "0:1605:0"
   },
   "compiler": {
     "name": "solc",
@@ -5254,8 +5140,8 @@
     "1": {
       "events": {},
       "links": {},
-      "address": "0x01B24cA0426157BD174f24EbF181d62dcbF1c53C",
-      "transactionHash": "0x9c4084e75108521348104db4bb3f46eb0c86c495aeccf8e20b60d44a00104479"
+      "address": "0x68A5Dec9e8Eb40b771B2cA826BDA801e1F40B918",
+      "transactionHash": "0x3c9ac41d39eb7db165cf2e9ffab7e0138c8c1766fe2878ee1bdbe84cb142ec6d"
     },
     "8995": {
       "events": {},
@@ -5265,7 +5151,7 @@
     }
   },
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-29T14:08:17.104Z",
+  "updatedAt": "2020-01-30T10:22:49.841Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

@@ -21,8 +21,8 @@
     <button @click="addDatafeed"> Add datafeed</button>
     <p> Datafeeds: {{jobs}} </p>
 
-    <h3> The king of crypto is</h3>
-    <h2>{{job.name}} </h2>
+    <h3> The king of crypto is Job Id {{king}}</h3>
+    <h2>{{name}} </h2>
     <p> <button @click="refresh"> Calculate the current king </button> </p>
 
 
@@ -57,9 +57,9 @@ export default {
         await enableEth()
         await this.getKing()
         if (this.king !== 0) {
-            await this.getJob(this.king)
+            this.name = (await this.getJob(this.king)).name
         }
-        this.name = this.job.name
+        // this.name = this.job.name
         await this.getJobs()
     },
     methods: {
@@ -77,7 +77,7 @@ export default {
         },
         getJob: async function(id) {
             // console.log('getJob', id)
-            this.job = await getJob(id)
+            return getJob(id)
         }
 
     }
