@@ -2,3 +2,4 @@
 .infura
 .skale
 node_modules/
+king/.env

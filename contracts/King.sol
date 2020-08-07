@@ -1,4 +1,4 @@
-pragma solidity 0.5.10;
+pragma solidity 0.6.11;
 
 interface Razor {
     function getResult(uint256 id) external view returns (uint256);
@@ -13,7 +13,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e);
+        razor = Razor(0x6FBDB9A4A27E17dcc852C093629b2808B09c663e);
     }
 
     function addFeed(uint256 jobId) public {
