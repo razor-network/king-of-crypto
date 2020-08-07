@@ -2,9 +2,14 @@
   "contractName": "King",
   "abi": [
     {
-      "constant": true,
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
       "inputs": [
         {
+          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
@@ -12,18 +17,33 @@
       "name": "jobs",
       "outputs": [
         {
+          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
       ],
-      "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
-      "constant": true,
+      "inputs": [],
+      "name": "king",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
       "inputs": [
         {
+          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
@@ -31,95 +51,74 @@
       "name": "lastResults",
       "outputs": [
         {
+          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
       ],
-      "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
-      "constant": true,
-      "inputs": [],
-      "name": "razor",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
       "inputs": [],
       "name": "numJobs",
       "outputs": [
         {
+          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
       ],
-      "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
-      "constant": true,
       "inputs": [],
-      "name": "king",
+      "name": "razor",
       "outputs": [
         {
+          "internalType": "contract Razor",
           "name": "",
-          "type": "uint256"
+          "type": "address"
         }
       ],
-      "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
-      "inputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "constant": false,
       "inputs": [
         {
+          "internalType": "uint256",
           "name": "jobId",
           "type": "uint256"
         }
       ],
       "name": "addFeed",
       "outputs": [],
-      "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": false,
       "inputs": [],
       "name": "findKing",
       "outputs": [],
-      "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"jobs\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"lastResults\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"razor\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"numJobs\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"jobId\",\"type\":\"uint256\"}],\"name\":\"addFeed\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"king\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"findKing\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":\"King\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/hrishi/king-of-crypto/contracts/King.sol\":{\"keccak256\":\"0x0a39898685ede739038150675114e46dc521a2e2b78a01b4cc4093d28326f65d\",\"urls\":[\"bzzr://3c75fbcc6bdc56fd61a5d9bbf2523598916524ddc9f1feff480e23638430419b\",\"dweb:/ipfs/QmcdSCGNdPvhCs2mxXFtdbxL3Q4tfuoysFpBVvwXseTh5D\"]}},\"version\":1}",
-  "bytecode": "0x60806040526000600255600060035534801561001a57600080fd5b50733be8b3ea5cb7d7d19032a56d3adf1f0f8e97e34e6000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506105108061007e6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80639212051c1161005b5780639212051c14610150578063b7e785b61461016e578063cc181ca81461019c578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c4578063426dbe4e14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61015861022b565b6040518082815260200191505060405180910390f35b61019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610231565b005b6101a4610299565b6040518082815260200191505060405180910390f35b6101c261029f565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600181908060018154018082558091505090600182039060005260206000200160009091929091909150555060016002540160028190555060046000908060018154018082558091505090600182039060005260206000200160009091929091909150555050565b60035481565b600080905060008090506000809050600080905060008090505b6001805490508110156104ad5760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061031257fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035157600080fd5b505afa158015610365573d6000803e3d6000fd5b505050506040513d602081101561037b57600080fd5b810190808051906020019092919050505090506004828154811061039b57fe5b906000526020600020015481111561040a5785600483815481106103bb57fe5b90600052602060002001548203111561040557600482815481106103db57fe5b906000526020600020015481039550600182815481106103f757fe5b906000526020600020015494505b610483565b6004828154811061041757fe5b90600052602060002001548110156104825783816004848154811061043857fe5b906000526020600020015403101561048157806004838154811061045857fe5b90600052602060002001540393506001828154811061047357fe5b906000526020600020015492505b5b5b806004838154811061049157fe5b90600052602060002001819055505080806001019150506102b9565b5060008411156104c357826003819055506104d5565b60008211156104d457806003819055505b5b5050505056fea265627a7a72305820b4a786f69267a139b6cec9172f7faca2687159102a2a523f42277679b7cf738b64736f6c634300050a0032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80639212051c1161005b5780639212051c14610150578063b7e785b61461016e578063cc181ca81461019c578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c4578063426dbe4e14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61015861022b565b6040518082815260200191505060405180910390f35b61019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610231565b005b6101a4610299565b6040518082815260200191505060405180910390f35b6101c261029f565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600181908060018154018082558091505090600182039060005260206000200160009091929091909150555060016002540160028190555060046000908060018154018082558091505090600182039060005260206000200160009091929091909150555050565b60035481565b600080905060008090506000809050600080905060008090505b6001805490508110156104ad5760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061031257fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035157600080fd5b505afa158015610365573d6000803e3d6000fd5b505050506040513d602081101561037b57600080fd5b810190808051906020019092919050505090506004828154811061039b57fe5b906000526020600020015481111561040a5785600483815481106103bb57fe5b90600052602060002001548203111561040557600482815481106103db57fe5b906000526020600020015481039550600182815481106103f757fe5b906000526020600020015494505b610483565b6004828154811061041757fe5b90600052602060002001548110156104825783816004848154811061043857fe5b906000526020600020015403101561048157806004838154811061045857fe5b90600052602060002001540393506001828154811061047357fe5b906000526020600020015492505b5b5b806004838154811061049157fe5b90600052602060002001819055505080806001019150506102b9565b5060008411156104c357826003819055506104d5565b60008211156104d457806003819055505b5b5050505056fea265627a7a72305820b4a786f69267a139b6cec9172f7faca2687159102a2a523f42277679b7cf738b64736f6c634300050a0032",
-  "sourceMap": "261:1343:0:-;;;357:1;332:26;;386:1;364:23;;428:95;8:9:-1;5:2;;;30:1;27;20:12;5:2;428:95:0;473:42;459:5;;:57;;;;;;;;;;;;;;;;;;261:1343;;;;;;",
-  "deployedSourceMap": "261:1343:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;261:1343:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;305:21;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;305:21:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;393:28;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;393:28:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;281:18;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;332:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;529:132;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;529:132:0;;;;;;;;;;;;;;;;;:::i;:::-;;364:23;;;:::i;:::-;;;;;;;;;;;;;;;;;;;667:935;;;:::i;:::-;;305:21;;;;;;;;;;;;;;;;;;;;;;;;;:::o;393:28::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;281:18::-;;;;;;;;;;;;;:::o;332:26::-;;;;:::o;529:132::-;578:4;588:5;578:16;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;578:16:0;;;;;;;;;;;;;;;;;;;;;;624:1;614:7;;:11;604:7;:21;;;;635:11;652:1;635:19;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;635:19:0;;;;;;;;;;;;;;;;;;;;;;529:132;:::o;364:23::-;;;;:::o;667:935::-;704:19;726:1;704:23;;737:21;761:1;737:25;;772:17;792:1;772:21;;803:18;824:1;803:22;;839:9;851:1;839:13;;835:619;858:4;:11;;;;854:1;:15;835:619;;;890:13;906:5;;;;;;;;;;;:15;;;922:4;927:1;922:7;;;;;;;;;;;;;;;;906:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;906:24:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;906:24:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;906:24:0;;;;;;;;;;;;;;;;890:40;;955:11;967:1;955:14;;;;;;;;;;;;;;;;947:5;:22;944:463;;;1017:11;1000;1012:1;1000:14;;;;;;;;;;;;;;;;992:5;:22;:36;989:163;;;1074:11;1086:1;1074:14;;;;;;;;;;;;;;;;1066:5;:22;1052:36;;1126:4;1131:1;1126:7;;;;;;;;;;;;;;;;1110:23;;989:163;944:463;;;1183:11;1195:1;1183:14;;;;;;;;;;;;;;;;1175:5;:22;1172:235;;;1249:9;1241:5;1224:11;1236:1;1224:14;;;;;;;;;;;;;;;;:22;:34;1221:168;;;1315:5;1298:11;1310:1;1298:14;;;;;;;;;;;;;;;;:22;1286:34;;1359:4;1364:1;1359:7;;;;;;;;;;;;;;;;1346:20;;1221:168;1172:235;944:463;1438:5;1421:11;1433:1;1421:14;;;;;;;;;;;;;;;:22;;;;835:619;871:3;;;;;;;835:619;;;;1481:1;1467:11;:15;1463:133;;;1505:13;1498:4;:20;;;;1463:133;;;1551:1;1539:9;:13;1535:61;;;1575:10;1568:4;:17;;;;1535:61;1463:133;667:935;;;;:::o",
-  "source": "pragma solidity 0.5.10;\n\ninterface Razor {\n    function getResult(uint256 id) external view returns (uint256);\n    function getJob(uint256 id) external view returns(string memory url, string memory selector, string memory name, bool repeat, uint256 result);\n}\n\ncontract King {\n    Razor public razor;\n    uint256[] public jobs;\n    uint256 public numJobs = 0;\n    uint256 public king = 0;\n    uint256[] public lastResults;\n\n    constructor() public {\n        razor = Razor(0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e);\n    }\n\n    function addFeed(uint256 jobId) public {\n        jobs.push(jobId);\n        numJobs = numJobs + 1;\n        lastResults.push(0);\n    }\n\n    function findKing() public {\n        uint256 highestGain = 0;\n        uint256 highestGainer = 0;\n        uint256 leastLoss = 0;\n        uint256 leastLoser = 0;\n        for(uint256 i = 0; i < jobs.length; i++) {\n            uint256 price = razor.getResult(jobs[i]);\n            if(price > lastResults[i]) {\n                if(price - lastResults[i] > highestGain) {\n                    highestGain = price - lastResults[i];\n                    highestGainer = jobs[i];\n                }\n            } else if(price < lastResults[i]) {\n                    if(lastResults[i] - price < leastLoss) {\n                        leastLoss = lastResults[i] - price;\n                        leastLoser = jobs[i];\n                    }\n                }\n\n            lastResults[i] = price;\n        }\n        if (highestGain > 0) {\n            king = highestGainer;\n        } else if (leastLoss > 0) {\n            king = leastLoser;\n        }\n    }\n}\n",
-  "sourcePath": "/Users/hrishi/king-of-crypto/contracts/King.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.11+commit.5ef660b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"jobId\",\"type\":\"uint256\"}],\"name\":\"addFeed\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"findKing\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"jobs\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"king\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"lastResults\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"numJobs\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"razor\",\"outputs\":[{\"internalType\":\"contract Razor\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/user/Documents/Razor-Internship/king-of-crypto/contracts/King.sol\":\"King\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/user/Documents/Razor-Internship/king-of-crypto/contracts/King.sol\":{\"keccak256\":\"0x85db1621ddbaaa50ffa3a5b111441b7f98ac0f588f2246b56606b2ea46d92722\",\"urls\":[\"bzz-raw://284ea61d2bee103a216bc060a3d7a2864589958a48793307f443793f0290c46a\",\"dweb:/ipfs/QmeV3fjvERSe8iTWCTWWqrRYZcfS1upwC6wt7XTtP5EWyr\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000600255600060035534801561001a57600080fd5b50736fbdb9a4a27e17dcc852c093629b2808b09c663e6000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061050b8061007e6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80639212051c1161005b5780639212051c14610150578063b7e785b61461016e578063cc181ca81461019c578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c4578063426dbe4e14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61015861022b565b6040518082815260200191505060405180910390f35b61019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610231565b005b6101a4610293565b6040518082815260200191505060405180910390f35b6101c2610299565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600181908060018154018082558091505060019003906000526020600020016000909190919091505560016002540160028190555060046000908060018154018082558091505060019003906000526020600020016000909190919091505550565b60035481565b600080905060008090506000809050600080905060008090505b6001805490508110156104a75760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061030c57fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561034b57600080fd5b505afa15801561035f573d6000803e3d6000fd5b505050506040513d602081101561037557600080fd5b810190808051906020019092919050505090506004828154811061039557fe5b90600052602060002001548111156104045785600483815481106103b557fe5b9060005260206000200154820311156103ff57600482815481106103d557fe5b906000526020600020015481039550600182815481106103f157fe5b906000526020600020015494505b61047d565b6004828154811061041157fe5b906000526020600020015481101561047c5783816004848154811061043257fe5b906000526020600020015403101561047b57806004838154811061045257fe5b90600052602060002001540393506001828154811061046d57fe5b906000526020600020015492505b5b5b806004838154811061048b57fe5b90600052602060002001819055505080806001019150506102b3565b5060008411156104bd57826003819055506104cf565b60008211156104ce57806003819055505b5b5050505056fea26469706673582212205470fb727901d4620d161619c08dbb8877908747d922c1043990c13e33458a4e64736f6c634300060b0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80639212051c1161005b5780639212051c14610150578063b7e785b61461016e578063cc181ca81461019c578063cf8975c3146101ba5761007d565b8063180aedf3146100825780633924ec8a146100c4578063426dbe4e14610106575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506101c4565b6040518082815260200191505060405180910390f35b6100f0600480360360208110156100da57600080fd5b81019080803590602001909291905050506101e5565b6040518082815260200191505060405180910390f35b61010e610206565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61015861022b565b6040518082815260200191505060405180910390f35b61019a6004803603602081101561018457600080fd5b8101908080359060200190929190505050610231565b005b6101a4610293565b6040518082815260200191505060405180910390f35b6101c2610299565b005b600181815481106101d157fe5b906000526020600020016000915090505481565b600481815481106101f257fe5b906000526020600020016000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600181908060018154018082558091505060019003906000526020600020016000909190919091505560016002540160028190555060046000908060018154018082558091505060019003906000526020600020016000909190919091505550565b60035481565b600080905060008090506000809050600080905060008090505b6001805490508110156104a75760008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663995e43396001848154811061030c57fe5b90600052602060002001546040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561034b57600080fd5b505afa15801561035f573d6000803e3d6000fd5b505050506040513d602081101561037557600080fd5b810190808051906020019092919050505090506004828154811061039557fe5b90600052602060002001548111156104045785600483815481106103b557fe5b9060005260206000200154820311156103ff57600482815481106103d557fe5b906000526020600020015481039550600182815481106103f157fe5b906000526020600020015494505b61047d565b6004828154811061041157fe5b906000526020600020015481101561047c5783816004848154811061043257fe5b906000526020600020015403101561047b57806004838154811061045257fe5b90600052602060002001540393506001828154811061046d57fe5b906000526020600020015492505b5b5b806004838154811061048b57fe5b90600052602060002001819055505080806001019150506102b3565b5060008411156104bd57826003819055506104cf565b60008211156104ce57806003819055505b5b5050505056fea26469706673582212205470fb727901d4620d161619c08dbb8877908747d922c1043990c13e33458a4e64736f6c634300060b0033",
+  "immutableReferences": {},
+  "sourceMap": "261:1343:0:-:0;;;357:1;332:26;;386:1;364:23;;428:95;;;;;;;;;;473:42;459:5;;:57;;;;;;;;;;;;;;;;;;261:1343;;;;;;",
+  "deployedSourceMap": "261:1343:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;305:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;393:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;281:18;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;332:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;529:132;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;364:23;;;:::i;:::-;;;;;;;;;;;;;;;;;;;667:935;;;:::i;:::-;;305:21;;;;;;;;;;;;;;;;;;;;;;;;;:::o;393:28::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;281:18::-;;;;;;;;;;;;;:::o;332:26::-;;;;:::o;529:132::-;578:4;588:5;578:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;624:1;614:7;;:11;604:7;:21;;;;635:11;652:1;635:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;529:132;:::o;364:23::-;;;;:::o;667:935::-;704:19;726:1;704:23;;737:21;761:1;737:25;;772:17;792:1;772:21;;803:18;824:1;803:22;;839:9;851:1;839:13;;835:619;858:4;:11;;;;854:1;:15;835:619;;;890:13;906:5;;;;;;;;;;;:15;;;922:4;927:1;922:7;;;;;;;;;;;;;;;;906:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;890:40;;955:11;967:1;955:14;;;;;;;;;;;;;;;;947:5;:22;944:463;;;1017:11;1000;1012:1;1000:14;;;;;;;;;;;;;;;;992:5;:22;:36;989:163;;;1074:11;1086:1;1074:14;;;;;;;;;;;;;;;;1066:5;:22;1052:36;;1126:4;1131:1;1126:7;;;;;;;;;;;;;;;;1110:23;;989:163;944:463;;;1183:11;1195:1;1183:14;;;;;;;;;;;;;;;;1175:5;:22;1172:235;;;1249:9;1241:5;1224:11;1236:1;1224:14;;;;;;;;;;;;;;;;:22;:34;1221:168;;;1315:5;1298:11;1310:1;1298:14;;;;;;;;;;;;;;;;:22;1286:34;;1359:4;1364:1;1359:7;;;;;;;;;;;;;;;;1346:20;;1221:168;1172:235;944:463;1438:5;1421:11;1433:1;1421:14;;;;;;;;;;;;;;;:22;;;;835:619;871:3;;;;;;;835:619;;;;1481:1;1467:11;:15;1463:133;;;1505:13;1498:4;:20;;;;1463:133;;;1551:1;1539:9;:13;1535:61;;;1575:10;1568:4;:17;;;;1535:61;1463:133;667:935;;;;:::o",
+  "source": "pragma solidity 0.6.11;\n\ninterface Razor {\n    function getResult(uint256 id) external view returns (uint256);\n    function getJob(uint256 id) external view returns(string memory url, string memory selector, string memory name, bool repeat, uint256 result);\n}\n\ncontract King {\n    Razor public razor;\n    uint256[] public jobs;\n    uint256 public numJobs = 0;\n    uint256 public king = 0;\n    uint256[] public lastResults;\n\n    constructor() public {\n        razor = Razor(0x6FBDB9A4A27E17dcc852C093629b2808B09c663e);\n    }\n\n    function addFeed(uint256 jobId) public {\n        jobs.push(jobId);\n        numJobs = numJobs + 1;\n        lastResults.push(0);\n    }\n\n    function findKing() public {\n        uint256 highestGain = 0;\n        uint256 highestGainer = 0;\n        uint256 leastLoss = 0;\n        uint256 leastLoser = 0;\n        for(uint256 i = 0; i < jobs.length; i++) {\n            uint256 price = razor.getResult(jobs[i]);\n            if(price > lastResults[i]) {\n                if(price - lastResults[i] > highestGain) {\n                    highestGain = price - lastResults[i];\n                    highestGainer = jobs[i];\n                }\n            } else if(price < lastResults[i]) {\n                    if(lastResults[i] - price < leastLoss) {\n                        leastLoss = lastResults[i] - price;\n                        leastLoser = jobs[i];\n                    }\n                }\n\n            lastResults[i] = price;\n        }\n        if (highestGain > 0) {\n            king = highestGainer;\n        } else if (leastLoss > 0) {\n            king = leastLoser;\n        }\n    }\n}\n",
+  "sourcePath": "/home/user/Documents/Razor-Internship/king-of-crypto/contracts/King.sol",
   "ast": {
-    "absolutePath": "/Users/hrishi/king-of-crypto/contracts/King.sol",
+    "absolutePath": "/home/user/Documents/Razor-Internship/king-of-crypto/contracts/King.sol",
     "exportedSymbols": {
       "King": [
         199
@@ -129,19 +128,21 @@
       ]
     },
     "id": 200,
+    "license": null,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
         "literals": [
           "solidity",
-          "0.5",
-          ".10"
+          "0.6",
+          ".11"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:23:0"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
@@ -157,12 +158,14 @@
           {
             "body": null,
             "documentation": null,
+            "functionSelector": "995e4339",
             "id": 8,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getResult",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 4,
               "nodeType": "ParameterList",
@@ -170,8 +173,10 @@
                 {
                   "constant": false,
                   "id": 3,
+                  "mutability": "mutable",
                   "name": "id",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 8,
                   "src": "66:10:0",
                   "stateVariable": false,
@@ -203,8 +208,10 @@
                 {
                   "constant": false,
                   "id": 6,
+                  "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 8,
                   "src": "101:7:0",
                   "stateVariable": false,
@@ -232,18 +239,20 @@
             "scope": 24,
             "src": "47:63:0",
             "stateMutability": "view",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "external"
           },
           {
             "body": null,
             "documentation": null,
+            "functionSelector": "bf22c457",
             "id": 23,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getJob",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 11,
               "nodeType": "ParameterList",
@@ -251,8 +260,10 @@
                 {
                   "constant": false,
                   "id": 10,
+                  "mutability": "mutable",
                   "name": "id",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "131:10:0",
                   "stateVariable": false,
@@ -284,8 +295,10 @@
                 {
                   "constant": false,
                   "id": 13,
+                  "mutability": "mutable",
                   "name": "url",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "165:17:0",
                   "stateVariable": false,
@@ -310,8 +323,10 @@
                 {
                   "constant": false,
                   "id": 15,
+                  "mutability": "mutable",
                   "name": "selector",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "184:22:0",
                   "stateVariable": false,
@@ -336,8 +351,10 @@
                 {
                   "constant": false,
                   "id": 17,
+                  "mutability": "mutable",
                   "name": "name",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "208:18:0",
                   "stateVariable": false,
@@ -362,8 +379,10 @@
                 {
                   "constant": false,
                   "id": 19,
+                  "mutability": "mutable",
                   "name": "repeat",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "228:11:0",
                   "stateVariable": false,
@@ -388,8 +407,10 @@
                 {
                   "constant": false,
                   "id": 21,
+                  "mutability": "mutable",
                   "name": "result",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "241:14:0",
                   "stateVariable": false,
@@ -417,7 +438,7 @@
             "scope": 24,
             "src": "115:142:0",
             "stateMutability": "view",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "external"
           }
         ],
@@ -425,6 +446,7 @@
         "src": "25:234:0"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
@@ -439,9 +461,12 @@
         "nodes": [
           {
             "constant": false,
+            "functionSelector": "426dbe4e",
             "id": 26,
+            "mutability": "mutable",
             "name": "razor",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "281:18:0",
             "stateVariable": true,
@@ -467,9 +492,12 @@
           },
           {
             "constant": false,
+            "functionSelector": "180aedf3",
             "id": 29,
+            "mutability": "mutable",
             "name": "jobs",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "305:21:0",
             "stateVariable": true,
@@ -503,9 +531,12 @@
           },
           {
             "constant": false,
+            "functionSelector": "9212051c",
             "id": 32,
+            "mutability": "mutable",
             "name": "numJobs",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "332:26:0",
             "stateVariable": true,
@@ -546,9 +577,12 @@
           },
           {
             "constant": false,
+            "functionSelector": "cc181ca8",
             "id": 35,
+            "mutability": "mutable",
             "name": "king",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "364:23:0",
             "stateVariable": true,
@@ -589,9 +623,12 @@
           },
           {
             "constant": false,
+            "functionSelector": "3924ec8a",
             "id": 38,
+            "mutability": "mutable",
             "name": "lastResults",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "393:28:0",
             "stateVariable": true,
@@ -657,7 +694,7 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "hexValue": "307833626538623345613543623764374431393033324135364433614446314630663865393765333465",
+                          "hexValue": "307836464244423941344132374531376463633835324330393336323962323830384230396336363365",
                           "id": 43,
                           "isConstant": false,
                           "isLValue": false,
@@ -671,7 +708,7 @@
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
                           },
-                          "value": "0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e"
+                          "value": "0x6FBDB9A4A27E17dcc852C093629b2808B09c663e"
                         }
                       ],
                       "expression": {
@@ -701,6 +738,7 @@
                       "names": [],
                       "nodeType": "FunctionCall",
                       "src": "467:49:0",
+                      "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_Razor_$24",
                         "typeString": "contract Razor"
@@ -725,6 +763,7 @@
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 39,
               "nodeType": "ParameterList",
@@ -740,7 +779,7 @@
             "scope": 199,
             "src": "428:95:0",
             "stateMutability": "nonpayable",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           },
           {
@@ -797,8 +836,8 @@
                       "referencedDeclaration": null,
                       "src": "578:9:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
-                        "typeString": "function (uint256) returns (uint256)"
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
                       }
                     },
                     "id": 57,
@@ -810,9 +849,10 @@
                     "names": [],
                     "nodeType": "FunctionCall",
                     "src": "578:16:0",
+                    "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
                     }
                   },
                   "id": 58,
@@ -955,8 +995,8 @@
                       "referencedDeclaration": null,
                       "src": "635:16:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
-                        "typeString": "function (uint256) returns (uint256)"
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
                       }
                     },
                     "id": 69,
@@ -968,9 +1008,10 @@
                     "names": [],
                     "nodeType": "FunctionCall",
                     "src": "635:19:0",
+                    "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
                     }
                   },
                   "id": 70,
@@ -980,12 +1021,14 @@
               ]
             },
             "documentation": null,
+            "functionSelector": "b7e785b6",
             "id": 72,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addFeed",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 51,
               "nodeType": "ParameterList",
@@ -993,8 +1036,10 @@
                 {
                   "constant": false,
                   "id": 50,
+                  "mutability": "mutable",
                   "name": "jobId",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 72,
                   "src": "546:13:0",
                   "stateVariable": false,
@@ -1028,7 +1073,7 @@
             "scope": 199,
             "src": "529:132:0",
             "stateMutability": "nonpayable",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           },
           {
@@ -1045,8 +1090,10 @@
                     {
                       "constant": false,
                       "id": 76,
+                      "mutability": "mutable",
                       "name": "highestGain",
                       "nodeType": "VariableDeclaration",
+                      "overrides": null,
                       "scope": 197,
                       "src": "704:19:0",
                       "stateVariable": false,
@@ -1099,8 +1146,10 @@
                     {
                       "constant": false,
                       "id": 80,
+                      "mutability": "mutable",
                       "name": "highestGainer",
                       "nodeType": "VariableDeclaration",
+                      "overrides": null,
                       "scope": 197,
                       "src": "737:21:0",
                       "stateVariable": false,
@@ -1153,8 +1202,10 @@
                     {
                       "constant": false,
                       "id": 84,
+                      "mutability": "mutable",
                       "name": "leastLoss",
                       "nodeType": "VariableDeclaration",
+                      "overrides": null,
                       "scope": 197,
                       "src": "772:17:0",
                       "stateVariable": false,
@@ -1207,8 +1258,10 @@
                     {
                       "constant": false,
                       "id": 88,
+                      "mutability": "mutable",
                       "name": "leastLoser",
                       "nodeType": "VariableDeclaration",
+                      "overrides": null,
                       "scope": 197,
                       "src": "803:18:0",
                       "stateVariable": false,
@@ -1267,8 +1320,10 @@
                           {
                             "constant": false,
                             "id": 103,
+                            "mutability": "mutable",
                             "name": "price",
                             "nodeType": "VariableDeclaration",
+                            "overrides": null,
                             "scope": 177,
                             "src": "890:13:0",
                             "stateVariable": false,
@@ -1379,6 +1434,7 @@
                           "names": [],
                           "nodeType": "FunctionCall",
                           "src": "906:24:0",
+                          "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -2264,7 +2320,7 @@
                       },
                       "id": 97,
                       "isConstant": false,
-                      "isLValue": true,
+                      "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "length",
@@ -2291,8 +2347,10 @@
                       {
                         "constant": false,
                         "id": 92,
+                        "mutability": "mutable",
                         "name": "i",
                         "nodeType": "VariableDeclaration",
+                        "overrides": null,
                         "scope": 178,
                         "src": "839:9:0",
                         "stateVariable": false,
@@ -2594,12 +2652,14 @@
               ]
             },
             "documentation": null,
+            "functionSelector": "cf8975c3",
             "id": 198,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "findKing",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 73,
               "nodeType": "ParameterList",
@@ -2615,7 +2675,7 @@
             "scope": 199,
             "src": "667:935:0",
             "stateMutability": "nonpayable",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           }
         ],
@@ -2626,7 +2686,7 @@
     "src": "0:1605:0"
   },
   "legacyAST": {
-    "absolutePath": "/Users/hrishi/king-of-crypto/contracts/King.sol",
+    "absolutePath": "/home/user/Documents/Razor-Internship/king-of-crypto/contracts/King.sol",
     "exportedSymbols": {
       "King": [
         199
@@ -2636,19 +2696,21 @@
       ]
     },
     "id": 200,
+    "license": null,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
         "literals": [
           "solidity",
-          "0.5",
-          ".10"
+          "0.6",
+          ".11"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:23:0"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
@@ -2664,12 +2726,14 @@
           {
             "body": null,
             "documentation": null,
+            "functionSelector": "995e4339",
             "id": 8,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getResult",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 4,
               "nodeType": "ParameterList",
@@ -2677,8 +2741,10 @@
                 {
                   "constant": false,
                   "id": 3,
+                  "mutability": "mutable",
                   "name": "id",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 8,
                   "src": "66:10:0",
                   "stateVariable": false,
@@ -2710,8 +2776,10 @@
                 {
                   "constant": false,
                   "id": 6,
+                  "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 8,
                   "src": "101:7:0",
                   "stateVariable": false,
@@ -2739,18 +2807,20 @@
             "scope": 24,
             "src": "47:63:0",
             "stateMutability": "view",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "external"
           },
           {
             "body": null,
             "documentation": null,
+            "functionSelector": "bf22c457",
             "id": 23,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getJob",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 11,
               "nodeType": "ParameterList",
@@ -2758,8 +2828,10 @@
                 {
                   "constant": false,
                   "id": 10,
+                  "mutability": "mutable",
                   "name": "id",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "131:10:0",
                   "stateVariable": false,
@@ -2791,8 +2863,10 @@
                 {
                   "constant": false,
                   "id": 13,
+                  "mutability": "mutable",
                   "name": "url",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "165:17:0",
                   "stateVariable": false,
@@ -2817,8 +2891,10 @@
                 {
                   "constant": false,
                   "id": 15,
+                  "mutability": "mutable",
                   "name": "selector",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "184:22:0",
                   "stateVariable": false,
@@ -2843,8 +2919,10 @@
                 {
                   "constant": false,
                   "id": 17,
+                  "mutability": "mutable",
                   "name": "name",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "208:18:0",
                   "stateVariable": false,
@@ -2869,8 +2947,10 @@
                 {
                   "constant": false,
                   "id": 19,
+                  "mutability": "mutable",
                   "name": "repeat",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "228:11:0",
                   "stateVariable": false,
@@ -2895,8 +2975,10 @@
                 {
                   "constant": false,
                   "id": 21,
+                  "mutability": "mutable",
                   "name": "result",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 23,
                   "src": "241:14:0",
                   "stateVariable": false,
@@ -2924,7 +3006,7 @@
             "scope": 24,
             "src": "115:142:0",
             "stateMutability": "view",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "external"
           }
         ],
@@ -2932,6 +3014,7 @@
         "src": "25:234:0"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
@@ -2946,9 +3029,12 @@
         "nodes": [
           {
             "constant": false,
+            "functionSelector": "426dbe4e",
             "id": 26,
+            "mutability": "mutable",
             "name": "razor",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "281:18:0",
             "stateVariable": true,
@@ -2974,9 +3060,12 @@
           },
           {
             "constant": false,
+            "functionSelector": "180aedf3",
             "id": 29,
+            "mutability": "mutable",
             "name": "jobs",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "305:21:0",
             "stateVariable": true,
@@ -3010,9 +3099,12 @@
           },
           {
             "constant": false,
+            "functionSelector": "9212051c",
             "id": 32,
+            "mutability": "mutable",
             "name": "numJobs",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "332:26:0",
             "stateVariable": true,
@@ -3053,9 +3145,12 @@
           },
           {
             "constant": false,
+            "functionSelector": "cc181ca8",
             "id": 35,
+            "mutability": "mutable",
             "name": "king",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "364:23:0",
             "stateVariable": true,
@@ -3096,9 +3191,12 @@
           },
           {
             "constant": false,
+            "functionSelector": "3924ec8a",
             "id": 38,
+            "mutability": "mutable",
             "name": "lastResults",
             "nodeType": "VariableDeclaration",
+            "overrides": null,
             "scope": 199,
             "src": "393:28:0",
             "stateVariable": true,
@@ -3164,7 +3262,7 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "hexValue": "307833626538623345613543623764374431393033324135364433614446314630663865393765333465",
+                          "hexValue": "307836464244423941344132374531376463633835324330393336323962323830384230396336363365",
                           "id": 43,
                           "isConstant": false,
                           "isLValue": false,
@@ -3178,7 +3276,7 @@
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
                           },
-                          "value": "0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e"
+                          "value": "0x6FBDB9A4A27E17dcc852C093629b2808B09c663e"
                         }
                       ],
                       "expression": {
@@ -3208,6 +3306,7 @@
                       "names": [],
                       "nodeType": "FunctionCall",
                       "src": "467:49:0",
+                      "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_Razor_$24",
                         "typeString": "contract Razor"
@@ -3232,6 +3331,7 @@
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 39,
               "nodeType": "ParameterList",
@@ -3247,7 +3347,7 @@
             "scope": 199,
             "src": "428:95:0",
             "stateMutability": "nonpayable",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           },
           {
@@ -3304,8 +3404,8 @@
                       "referencedDeclaration": null,
                       "src": "578:9:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
-                        "typeString": "function (uint256) returns (uint256)"
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
                       }
                     },
                     "id": 57,
@@ -3317,9 +3417,10 @@
                     "names": [],
                     "nodeType": "FunctionCall",
                     "src": "578:16:0",
+                    "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
                     }
                   },
                   "id": 58,
@@ -3462,8 +3563,8 @@
                       "referencedDeclaration": null,
                       "src": "635:16:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
-                        "typeString": "function (uint256) returns (uint256)"
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
                       }
                     },
                     "id": 69,
@@ -3475,9 +3576,10 @@
                     "names": [],
                     "nodeType": "FunctionCall",
                     "src": "635:19:0",
+                    "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
                     }
                   },
                   "id": 70,
@@ -3487,12 +3589,14 @@
               ]
             },
             "documentation": null,
+            "functionSelector": "b7e785b6",
             "id": 72,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addFeed",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 51,
               "nodeType": "ParameterList",
@@ -3500,8 +3604,10 @@
                 {
                   "constant": false,
                   "id": 50,
+                  "mutability": "mutable",
                   "name": "jobId",
                   "nodeType": "VariableDeclaration",
+                  "overrides": null,
                   "scope": 72,
                   "src": "546:13:0",
                   "stateVariable": false,
@@ -3535,7 +3641,7 @@
             "scope": 199,
             "src": "529:132:0",
             "stateMutability": "nonpayable",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           },
           {
@@ -3552,8 +3658,10 @@
                     {
                       "constant": false,
                       "id": 76,
+                      "mutability": "mutable",
                       "name": "highestGain",
                       "nodeType": "VariableDeclaration",
+                      "overrides": null,
                       "scope": 197,
                       "src": "704:19:0",
                       "stateVariable": false,
@@ -3606,8 +3714,10 @@
                     {
                       "constant": false,
                       "id": 80,
+                      "mutability": "mutable",
                       "name": "highestGainer",
                       "nodeType": "VariableDeclaration",
+                      "overrides": null,
                       "scope": 197,
                       "src": "737:21:0",
                       "stateVariable": false,
@@ -3660,8 +3770,10 @@
                     {
                       "constant": false,
                       "id": 84,
+                      "mutability": "mutable",
                       "name": "leastLoss",
                       "nodeType": "VariableDeclaration",
+                      "overrides": null,
                       "scope": 197,
                       "src": "772:17:0",
                       "stateVariable": false,
@@ -3714,8 +3826,10 @@
                     {
                       "constant": false,
                       "id": 88,
+                      "mutability": "mutable",
                       "name": "leastLoser",
                       "nodeType": "VariableDeclaration",
+                      "overrides": null,
                       "scope": 197,
                       "src": "803:18:0",
                       "stateVariable": false,
@@ -3774,8 +3888,10 @@
                           {
                             "constant": false,
                             "id": 103,
+                            "mutability": "mutable",
                             "name": "price",
                             "nodeType": "VariableDeclaration",
+                            "overrides": null,
                             "scope": 177,
                             "src": "890:13:0",
                             "stateVariable": false,
@@ -3886,6 +4002,7 @@
                           "names": [],
                           "nodeType": "FunctionCall",
                           "src": "906:24:0",
+                          "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -4771,7 +4888,7 @@
                       },
                       "id": 97,
                       "isConstant": false,
-                      "isLValue": true,
+                      "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "length",
@@ -4798,8 +4915,10 @@
                       {
                         "constant": false,
                         "id": 92,
+                        "mutability": "mutable",
                         "name": "i",
                         "nodeType": "VariableDeclaration",
+                        "overrides": null,
                         "scope": 178,
                         "src": "839:9:0",
                         "stateVariable": false,
@@ -5101,12 +5220,14 @@
               ]
             },
             "documentation": null,
+            "functionSelector": "cf8975c3",
             "id": 198,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "findKing",
             "nodeType": "FunctionDefinition",
+            "overrides": null,
             "parameters": {
               "id": 73,
               "nodeType": "ParameterList",
@@ -5122,7 +5243,7 @@
             "scope": 199,
             "src": "667:935:0",
             "stateMutability": "nonpayable",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           }
         ],
@@ -5134,7 +5255,7 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.10+commit.5a6ea5b1.Emscripten.clang"
+    "version": "0.6.11+commit.5ef660b1.Emscripten.clang"
   },
   "networks": {
     "1": {
@@ -5148,15 +5269,25 @@
       "links": {},
       "address": "0xE9699CA837252fF2d36f0EEf5591E451116365dA",
       "transactionHash": "0x4146b732345163820d1a322540e28b4432d6c337924aea848c46ab1fd06b8631"
+    },
+    "80001": {
+      "events": {},
+      "links": {},
+      "address": "0x8aCE7b709404146d4a603612F4EE7F6f5bc45efc",
+      "transactionHash": "0xd55f763341d5c6a1251784f1879e29409578cfe02f4eae9c4399ee75285cdcae"
     }
   },
-  "schemaVersion": "3.0.20",
-  "updatedAt": "2020-01-30T10:22:49.841Z",
+  "schemaVersion": "3.2.2",
+  "updatedAt": "2020-08-06T06:24:21.362Z",
   "networkType": "ethereum",
   "devdoc": {
-    "methods": {}
+    "kind": "dev",
+    "methods": {},
+    "version": 1
   },
   "userdoc": {
-    "methods": {}
+    "kind": "user",
+    "methods": {},
+    "version": 1
   }
 }

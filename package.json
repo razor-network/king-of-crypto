@@ -21,6 +21,6 @@
   "homepage": "https://github.com/razor-network/king-of-crypto#readme",
   "dependencies": {
     "truffle": "^5.0.34",
-    "truffle-hdwallet-provider": "^1.0.17"
+    "@truffle/hdwallet-provider": "^1.0.40"
   }
 }
