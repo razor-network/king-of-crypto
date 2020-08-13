@@ -26,7 +26,7 @@ export const enableEth = async () => {
         accounts = await window.ethereum.enable()
         web3 = new Web3(window.web3.currentProvider)
         if (process.env.VUE_APP_NETWORK === "matic") {
-            razorAddress = '0x6FBDB9A4A27E17dcc852C093629b2808B09c663e'
+            razorAddress = '0x2D50A444774EB4876e8e021E27125D0Aa91A7C7F'
             networkId = 80001
         } else if (process.env.VUE_APP_NETWORK === "skale") {
             razorAddress = '0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e'
